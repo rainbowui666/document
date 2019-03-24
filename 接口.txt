@@ -1,0 +1,248 @@
+1、删除用户
+http://127.0.0.1:8360/api/User/delete?id=3
+
+2、修改用户
+http://127.0.0.1:8360/api/User/save?userName=kkkkbx&pwd=123456&roleid=1&id=3
+
+3、新增用户
+http://127.0.0.1:8360/api/User/save?userName=kkkkbx&pwd=123456&roleid=1
+
+4、添加/修改角色
+http://127.0.0.1:8360/api/role/save?rolename=超级管理员
+
+http://127.0.0.1:8360/api/role/save?rolename=超级管理员&id=1
+
+5、删除角色
+http://127.0.0.1:8360/api/role/delete?id=1
+
+6、添加/修改权限
+http://127.0.0.1:8360/api/permission/save?permissionname=学校管理&roleid=1
+
+http://127.0.0.1:8360/api/permission/save?permissionname=学校管理&roleid=1&id=1
+
+7、删除权限
+http://127.0.0.1:8360/api/permission/delete?id=1
+
+8、学校列表
+http://127.0.0.1:8360/api/school/index?page=1&size=5&schoolname=复旦大学
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "count": 1,
+        "totalPages": 1,
+        "pageSize": 5,
+        "currentPage": 1,
+        "data": [
+            {
+                "schoolID": 1,
+                "schoolName": "复旦大学",
+                "province": "sh",
+                "city": "sh",
+                "address": "政通路255号",
+                "schooldesc": "复旦大学",
+                "shstate": {
+                    "checkin": 0, // 签到
+                    "wantto": 0, // 想去
+                    "sharenum": 0, // 分享
+                    "disnum": 0 // 留言
+                },
+                "pics": [ //图片
+                    {
+                        "sourceID": 4,
+                        "sourceType": 1,
+                        "sourceAddress": "src/aaa.jpg",
+                        "createDate": "2019-03-18 22:35:50",
+                        "targetid": 1,
+                        "shstate": 0,
+                        "picdesc": null
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+9、学校详情
+http://127.0.0.1:8360/api/school/detail?id=1
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "schoolID": 1,
+        "schoolName": "复旦大学",
+        "province": "sh",
+        "city": "sh",
+        "address": "政通路255号",
+        "schooldesc": "复旦大学",
+        "shstate": 0,
+        "scenery": [
+            {
+                "sceneryID": 1,
+                "schoolid": 1,
+                "address": "sh",
+                "shdesc": "1",
+                "longitude": null,
+                "latitude": null,
+                "sctype": 0,
+                "shstate": {
+                    "checkin": 0,
+                    "wantto": 0,
+                    "sharenum": 0,
+                    "disnum": 0
+                },
+                "pics": [
+                    {
+                        "sourceID": 4,
+                        "sourceType": 1,
+                        "sourceAddress": "src/aaa.jpg",
+                        "createDate": "2019-03-18 22:35:50",
+                        "targetid": 1,
+                        "shstate": 0,
+                        "picdesc": null
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+10、景点列表
+http://127.0.0.1:8360/api/scenery/index?page=1&size=5
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "count": 1,
+        "totalPages": 1,
+        "pageSize": 5,
+        "currentPage": 1,
+        "data": [
+            {
+                "sceneryID": 1,
+                "schoolid": 1,
+                "address": "sh",
+                "shdesc": "1",
+                "longitude": null,
+                "latitude": null,
+                "sctype": 0,
+                "shstate": {
+                    "checkin": 0,
+                    "wantto": 0,
+                    "sharenum": 0,
+                    "disnum": 0
+                },
+                "sceneryTitle": null,
+                "pics": [
+                    {
+                        "sourceID": 4,
+                        "sourceType": 1,
+                        "sourceAddress": "src/aaa.jpg",
+                        "createDate": "2019-03-18 22:35:50",
+                        "targetid": 1,
+                        "shstate": 0,
+                        "picdesc": null
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+11、景点详情
+http://127.0.0.1:8360/api/scenery/detail?id=1
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "sceneryID": 1,
+        "schoolid": 1,
+        "address": "sh",
+        "shdesc": "1",
+        "longitude": null,
+        "latitude": null,
+        "sctype": 0,
+        "shstate": {
+            "checkin": 0,
+            "wantto": 0,
+            "sharenum": 0,
+            "disnum": 0
+        },
+        "sceneryTitle": null,
+        "pics": [
+            {
+                "sourceID": 4,
+                "sourceType": 1,
+                "sourceAddress": "src/aaa.jpg",
+                "createDate": "2019-03-18 22:35:50",
+                "targetid": 1,
+                "shstate": 0,
+                "picdesc": null
+            }
+        ]
+    }
+}
+
+12、添加/修改学校，post
+http://127.0.0.1:8360/api/school/addEdit
+{
+					"schoolname":"上海大学",
+                    "province": "上海",
+                    "city": "上海",
+                    "address": "徐家汇",
+                    "schooldesc": "test",
+"sourceaddress": "images/sh.jpg",
+ "longitude":”123.34.556.433”,
+"latitude":”123.34.556.433”,
+"soundurl":”http://aaa.com/aa.mp3”,
+"videourl":”http://aaa.com/aa.mp4”,
+"parentid": 47 // 本条是分校区
+
+}
+
+addEdit?id=xxx，带id是编辑
+
+13、删除学校,get
+http://127.0.0.1:8360/api/school/delete?id=47
+
+14、添加/修改景点，post
+http://127.0.0.1:8360/api/scenery/addEdit
+{
+		    "scenerytitle":"上海大学逸夫楼",
+                    "schoolid": 47,
+                    "address": "杨浦区",
+                    "shdesc": "test",
+"sourceaddress": "images/sh.jpg",
+ "longitude":”123.34.556.433”,
+"latitude":”123.34.556.433”,
+"soundurl":”http://aaa.com/aa.mp3”,
+"videourl":”http://aaa.com/aa.mp4”
+
+}
+
+addEdit?id=xxx，带id是编辑
+
+15、删除景点,get
+http://127.0.0.1:8360/api/scenery/delete?id=47
+
+16、添加修改学生
+http://127.0.0.1:8360/api/student/addEdit?id=1, POST
+{
+			"studentname":"kbx",
+            "wxchat": "kbx",
+            "tel":"18601011111",
+            "stuNo":"20181109",
+            "idcard":"420222222222",
+            "birthday":"2018-09-20",
+            "schoolid":1,
+            "photo":"http://wxchat.qq.com/src/333.jpg",
+            "shstate":0,
+            "pwd":"123456",
+            "wxopenid":"fdafa-2333-afasfd",
+            "nickname":"kbx",
+            "sex":0
+}
+
+17、删除/解绑学生,get, shstate: 0，有效，1，删除，2，绑定，3，解绑
+http://127.0.0.1:8360/api/student/delete?id=1&shstate=2
+
