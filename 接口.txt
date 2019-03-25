@@ -246,3 +246,28 @@ http://127.0.0.1:8360/api/student/addEdit?id=1, POST
 17、删除/解绑学生,get, shstate: 0，有效，1，删除，2，绑定，3，解绑
 http://127.0.0.1:8360/api/student/delete?id=1&shstate=2
 
+18、添加修改活动,post
+http://127.0.0.1:8360/api/activity/addEdit?id=1
+{
+            "activityname":"高校一日游",
+            "sponsor":"上海大学",
+            "meetingplace":"上海大学正门口",
+            "secondsponsor":"上海教育局",
+            "needschoolrang":"1,2,8",
+            "startdate":"2019-03-15",
+            "enddate":"2019-04-15",
+            "shdesc":"高校一日游,感受高等学府氛围",
+            "shstate":0,
+            "startaddress":"上海大学门口",
+            "needschoolpass":2,
+            "needscenerypass":10,
+            "settingstart":1,
+            "startsceneryid":1,
+            "settingend":1,
+            "endsceneryid":1,
+            "isgroup":1,
+            "groupnum":10
+        }
+
+17、删除/解绑活动,get
+http://127.0.0.1:8360/api/activity/delete?id=1
