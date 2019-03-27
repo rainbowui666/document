@@ -246,8 +246,8 @@ http://127.0.0.1:8360/api/student/addEdit?id=1, POST
 17、删除/解绑学生,get, shstate: 0，有效，1，删除，2，绑定，3，解绑
 http://127.0.0.1:8360/api/student/delete?id=1&shstate=2
 
-18、添加修改活动,post
-http://127.0.0.1:8360/api/activity/addEdit?id=1
+18、添加修改活动1,post
+http://127.0.0.1:8360/api/activity/addEdit1?id=1
 {
             "activityname":"高校一日游",
             "sponsor":"上海大学",
@@ -269,5 +269,74 @@ http://127.0.0.1:8360/api/activity/addEdit?id=1
             "groupnum":10
         }
 
-17、删除/解绑活动,get
+19、添加/修改活动2,post,activityid活动id,必填，id修改时传
+http://127.0.0.1:8360/api/activity/addEdit2?activityid=1&id=2
+参数：{
+            "sceneryid":"1",
+            "questiontitle":"三好屋建设于那年？",
+            "answera":"1956年",
+            "answerb":"1965年",
+            "answerc":"1912年",
+            "answerd":"1987年",
+            "rightanswer":"A"
+        }
+
+20、活动2列表,get
+http://127.0.0.1:8360/api/activity/list2?page=1&size=5
+返回
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "count": 2,
+        "totalPages": 1,
+        "pageSize": 5,
+        "currentPage": 1,
+        "data": [
+            {
+                "questionID": 3,
+                "questiontitle": "三好屋建设于那年？",
+                "answera": "1956年",
+                "answerb": "1965年",
+                "answerc": "1912年",
+                "answerd": "1987年",
+                "rightanswer": "A",
+                "sceneryid": 1,
+                "activityid": 1,
+                "sceneryTitle": "三好屋",
+                "startAddress": "上海大学门口"
+            },
+            {
+                "questionID": 2,
+                "questiontitle": "三好屋建设于那年？",
+                "answera": "1956年",
+                "answerb": "1965年",
+                "answerc": "1912年",
+                "answerd": "1987年",
+                "rightanswer": "A",
+                "sceneryid": 1,
+                "activityid": 1,
+                "sceneryTitle": "三好屋",
+                "startAddress": "上海大学门口"
+            }
+        ]
+    }
+}
+
+21、删除/解绑活动,get
 http://127.0.0.1:8360/api/activity/delete?id=1
+
+22、删除活动问题,get
+http://127.0.0.1:8360/api/activity/delete2?id=1
+
+23、登录,post
+http://127.0.0.1:8360/api/auth/login
+参数:{
+            "tel":"18601011111",
+            "schoolid":1,
+            "studentname":"kbx",
+            "stuno":0
+        }
+
+返回：
+{"errno":0,"errmsg":"","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE1NTM1MjIwNTV9.KPKnv2j-0eInpOViOuAhNB1ubhO644n-BrncNQjR3Yw","userInfo":{"studentID":1,"studentName":"kbx","sex":0,"wxchat":"kbx","tel":"18601011111","stuNo":0,"IDCard":"420222222222","birthday":"2018-09-20","schoolid":1,"photo":"http://wxchat.qq.com/src/333.jpg","shstate":0,"pwd":"123456","wxopenid":"fdafa-2333-afasfd","nickname":"kbx"}}}
