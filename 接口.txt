@@ -340,3 +340,52 @@ http://127.0.0.1:8360/api/auth/login
 
 返回：
 {"errno":0,"errmsg":"","data":{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJpYXQiOjE1NTM1MjIwNTV9.KPKnv2j-0eInpOViOuAhNB1ubhO644n-BrncNQjR3Yw","userInfo":{"studentID":1,"studentName":"kbx","sex":0,"wxchat":"kbx","tel":"18601011111","stuNo":0,"IDCard":"420222222222","birthday":"2018-09-20","schoolid":1,"photo":"http://wxchat.qq.com/src/333.jpg","shstate":0,"pwd":"123456","wxopenid":"fdafa-2333-afasfd","nickname":"kbx"}}}
+
+24、留言,post
+distype：留言类型0,景点; 1,活动,2 学校,3首页
+targetid：为0时对应sceneryid,1时对应activityID, 2学校schoolid, 3 app首页不用传
+http://127.0.0.1:8360/api/discuss/add?distype=3&studentid=1&targetid=0
+参数：
+{
+"content":"good."
+}
+
+25、留言列表，get
+http://127.0.0.1:8360/api/discuss/list
+返回：{
+    "errno": 0,
+    "errmsg": "",
+    "data": [
+        {
+            "discussID": 3,
+            "studentName": "kbx",
+            "distype": 3,
+            "targetid": 0,
+            "studentid": 1,
+            "content": "good.",
+            "targetaddress": "APP首页"
+        },
+        {
+            "discussID": 4,
+            "studentName": "kbx",
+            "distype": 0,
+            "targetid": 1,
+            "studentid": 1,
+            "content": "这个景点很美，就是乱扔垃圾的人太多.",
+            "targetaddress": "三好屋"
+        },
+        {
+            "discussID": 5,
+            "studentName": "kbx",
+            "distype": 1,
+            "targetid": 1,
+            "studentid": 1,
+            "content": "这个景点很美，就是乱扔垃圾的人太多.",
+            "targetaddress": "高校一日游"
+        }
+    ]
+}
+
+25、修改，审批，受理留言
+0,默认待审核;1,审核通过，2，删除,3受理，4拒绝
+http://127.0.0.1:8360/api/discuss/update?id=3&shstate=1
