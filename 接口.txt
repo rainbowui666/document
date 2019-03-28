@@ -404,6 +404,7 @@ http://127.0.0.1:8360/api/search/searchList?pageindex=1&pagesize=5&keyword=大学
                 "msgtype": "school",
                 "longitude": null,
                 "latitude": null,
+                "pics": [],
                 "shstate": {
                     "wantto": 0,
                     "disnum": 0
@@ -415,6 +416,17 @@ http://127.0.0.1:8360/api/search/searchList?pageindex=1&pagesize=5&keyword=大学
                 "msgtype": "school",
                 "longitude": null,
                 "latitude": null,
+                "pics": [
+                    {
+                        "sourceID": 5,
+                        "sourceType": 0,
+                        "sourceAddress": "image/tj.jpg",
+                        "createDate": "2019-03-23 10:50:31",
+                        "targetid": 2,
+                        "shstate": 0,
+                        "picdesc": null
+                    }
+                ],
                 "shstate": {
                     "wantto": 0,
                     "disnum": 0
@@ -426,6 +438,17 @@ http://127.0.0.1:8360/api/search/searchList?pageindex=1&pagesize=5&keyword=大学
                 "msgtype": "school",
                 "longitude": null,
                 "latitude": null,
+                "pics": [
+                    {
+                        "sourceID": 6,
+                        "sourceType": 0,
+                        "sourceAddress": "image/jtjpg",
+                        "createDate": "2019-03-23 11:30:52",
+                        "targetid": 8,
+                        "shstate": 0,
+                        "picdesc": null
+                    }
+                ],
                 "shstate": {
                     "wantto": 0,
                     "disnum": 0
