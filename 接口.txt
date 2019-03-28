@@ -351,41 +351,86 @@ http://127.0.0.1:8360/api/discuss/add?distype=3&studentid=1&targetid=0
 }
 
 25、留言列表，get
-http://127.0.0.1:8360/api/discuss/list
-返回：{
+http://127.0.0.1:8360/api/discuss/list?pageindex=1&pagesize=10
+返回：
+{
     "errno": 0,
     "errmsg": "",
-    "data": [
-        {
-            "discussID": 3,
-            "studentName": "kbx",
-            "distype": 3,
-            "targetid": 0,
-            "studentid": 1,
-            "content": "good.",
-            "targetaddress": "APP首页"
-        },
-        {
-            "discussID": 4,
-            "studentName": "kbx",
-            "distype": 0,
-            "targetid": 1,
-            "studentid": 1,
-            "content": "这个景点很美，就是乱扔垃圾的人太多.",
-            "targetaddress": "三好屋"
-        },
-        {
-            "discussID": 5,
-            "studentName": "kbx",
-            "distype": 1,
-            "targetid": 1,
-            "studentid": 1,
-            "content": "这个景点很美，就是乱扔垃圾的人太多.",
-            "targetaddress": "高校一日游"
-        }
-    ]
+    "data": {
+        "pageindex": "1",
+        "pagesize": "10",
+        "data": [
+            {
+                "discussID": 4,
+                "studentName": "kbx",
+                "distype": 0,
+                "targetid": 1,
+                "studentid": 1,
+                "content": "这个景点很美，就是乱扔垃圾的人太多.",
+                "shstate": 0,
+                "targetaddress": "三好屋"
+            },
+            {
+                "discussID": 5,
+                "studentName": "kbx",
+                "distype": 1,
+                "targetid": 1,
+                "studentid": 1,
+                "content": "这个景点很美，就是乱扔垃圾的人太多.",
+                "shstate": 0,
+                "targetaddress": "高校一日游"
+            }
+        ]
+    }
 }
 
 25、修改，审批，受理留言
 0,默认待审核;1,审核通过，2，删除,3受理，4拒绝
 http://127.0.0.1:8360/api/discuss/update?id=3&shstate=1
+
+26、首页-搜索学校或景点,get
+http://127.0.0.1:8360/api/search/searchList?pageindex=1&pagesize=5&keyword=大学
+返回:
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "pageindex": "1",
+        "pagesize": "5",
+        "data": [
+            {
+                "id": 1,
+                "title": "复旦大学",
+                "msgtype": "school",
+                "longitude": null,
+                "latitude": null,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 0
+                }
+            },
+            {
+                "id": 2,
+                "title": "同济大学",
+                "msgtype": "school",
+                "longitude": null,
+                "latitude": null,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 0
+                }
+            },
+            {
+                "id": 8,
+                "title": "交通大学",
+                "msgtype": "school",
+                "longitude": null,
+                "latitude": null,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 0
+                }
+            }
+        ]
+    }
+}
