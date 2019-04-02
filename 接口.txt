@@ -507,7 +507,7 @@ http://127.0.0.1:8360/api/scenery/getscenerydetail?id=1
 http://127.0.0.1:8360/api/student_scenery/addEdit?studentid=1&sceneryid=1&shstate=1
 
 29、前台景点列表,get
-http://127.0.0.1:8360/api/activity/frontList?page=1&size=5
+http://127.0.0.1:8360/api/activity/frontList?page=1&size=5&studentid=1
 
 {
     "errno": 0,
@@ -528,7 +528,10 @@ http://127.0.0.1:8360/api/activity/frontList?page=1&size=5
                 "startDate": "2019-03-15 00:00:00",
                 "endDate": "2019-04-15 00:00:00",
                 "shdesc": "高校一日游,感受高等学府氛围",
-                "shstate": 0,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 1
+                },
                 "startAddress": "上海大学门口",
                 "needSchoolPass": null,
                 "needSceneryPass": null,
@@ -549,11 +552,14 @@ http://127.0.0.1:8360/api/activity/frontList?page=1&size=5
                         "shstate": 0,
                         "picdesc": null
                     }
-                ]
+                ],
+                "status": "进行中",
+                "hasjoin": "已报名"
             }
         ]
     }
 }
+
 
 30、景点签到,get, shstate 0想去；1签到；2去过；3推荐；4分享
 http://127.0.0.1:8360/api/student_activity/addEdit?studentid=1&activityid=1&shstate=1
