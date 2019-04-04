@@ -351,8 +351,9 @@ http://127.0.0.1:8360/api/discuss/add?distype=3&studentid=1&targetid=0
 "content":"good."
 }
 
-25、留言列表，get
+25、留言列表，get，distype,留言类型0,景点; 1,活动,2 学校,3首页,distype为0时对应sceneryid,1时对应activityID, 2学校schoolid必须要传其中一个
 http://127.0.0.1:8360/api/discuss/list?pageindex=1&pagesize=10
+可传参数：shstate=1&distype=1&sceneryid=1&activityid&schoolid=1
 返回：
 {
     "errno": 0,
@@ -473,7 +474,10 @@ http://127.0.0.1:8360/api/scenery/getscenerydetail?id=1
         "longitude": null,
         "latitude": null,
         "sctype": 0,
-        "shstate": 1,
+        "shstate": {
+            "wantto": 0,
+            "disnum": 1
+        },
         "sceneryTitle": "三好屋",
         "soundurl": null,
         "videourl": null,
@@ -502,11 +506,11 @@ http://127.0.0.1:8360/api/scenery/getscenerydetail?id=1
     }
 }
 
-28、签到,get
+28、景点签到,get
 // shstate,0想去；1签到；2去过；3推荐；4分享
 http://127.0.0.1:8360/api/student_scenery/addEdit?studentid=1&sceneryid=1&shstate=1
 
-29、前台景点列表,get
+29、前台活动列表,get
 http://127.0.0.1:8360/api/activity/frontList?page=1&size=5&studentid=1
 
 {
@@ -561,5 +565,165 @@ http://127.0.0.1:8360/api/activity/frontList?page=1&size=5&studentid=1
 }
 
 
-30、景点签到,get, shstate 0想去；1签到；2去过；3推荐；4分享
+30、活动签到,get, shstate 0想去；1签到；2去过；3推荐；4分享
 http://127.0.0.1:8360/api/student_activity/addEdit?studentid=1&activityid=1&shstate=1
+
+31、活动详情页-个人参赛方式，get
+http://127.0.0.1:8360/api/activity/getactivitydetail?id=1&studentid=1
+
+返回：
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "activityID": 1,
+        "activityName": "高校一日游",
+        "sponsor": "上海大学",
+        "meetingPlace": "上海大学正门口",
+        "secondSponsor": "上海教育局",
+        "needSchoolRang": "1,2,8",
+        "startDate": "2019-03-15 00:00:00",
+        "endDate": "2019-04-15 00:00:00",
+        "shdesc": "高校一日游,感受高等学府氛围",
+        "shstate": {
+            "wantto": 0,
+            "disnum": 1
+        },
+        "startAddress": "上海大学门口",
+        "needSchoolPass": null,
+        "needSceneryPass": null,
+        "settingStart": 1,
+        "startSceneryid": 1,
+        "settingEnd": 1,
+        "endSceneryid": 1,
+        "isGroup": 1,
+        "groupNum": 10,
+        "createDate": "2019-03-25 21:01:54",
+        "pics": [
+            {
+                "sourceID": 47,
+                "sourceType": 2,
+                "sourceAddress": "/static/upload/6cbc191a-791f-451a-8182-7d1a08b94ce5.jpg",
+                "createDate": "2019-03-23 22:58:01",
+                "targetid": 1,
+                "shstate": 0,
+                "picdesc": null
+            }
+        ],
+        "hasjoin": "已报名"
+    }
+}
+
+32、活动留言列表,get
+http://127.0.0.1:8360/api/activity/getActivityDiscussList?id=1
+返回:
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "activityID": 1,
+        "activityName": "高校一日游",
+        "sponsor": "上海大学",
+        "meetingPlace": "上海大学正门口",
+        "secondSponsor": "上海教育局",
+        "needSchoolRang": "1,2,8",
+        "startDate": "2019-03-15 00:00:00",
+        "endDate": "2019-04-15 00:00:00",
+        "shdesc": "高校一日游,感受高等学府氛围",
+        "shstate": 0,
+        "startAddress": "上海大学门口",
+        "needSchoolPass": null,
+        "needSceneryPass": null,
+        "settingStart": 1,
+        "startSceneryid": 1,
+        "settingEnd": 1,
+        "endSceneryid": 1,
+        "isGroup": 1,
+        "groupNum": 10,
+        "createDate": "2019-03-25 21:01:54",
+        "discussList": [
+            {
+                "discussID": 5,
+                "distype": 1,
+                "targetid": 1,
+                "studentid": 1,
+                "content": "这个景点很美，就是乱扔垃圾的人太多.",
+                "shstate": 1,
+                "createdate": "2019-03-27 21:14:11"
+            }
+        ]
+    }
+}
+
+33、活动参与景点列表,get
+http://127.0.0.1:8360/api/activity/getActivitySceneryList?pageindex=1&pagesize=5
+Return:
+
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "pageindex": "1",
+        "pagesize": "5",
+        "data": [
+            {
+                "activityid": 1,
+                "sceneryid": 1,
+                "questionid": 3,
+                "activityName": "高校一日游",
+                "startSceneryid": 1,
+                "endSceneryid": 1,
+                "schoolid": 1,
+                "address": "sh",
+                "shdesc": "1",
+                "longitude": null,
+                "latitude": null,
+                "sctype": 0,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 1
+                },
+                "sceneryTitle": "三好屋"
+            },
+            {
+                "activityid": 1,
+                "sceneryid": 1,
+                "questionid": 2,
+                "activityName": "高校一日游",
+                "startSceneryid": 1,
+                "endSceneryid": 1,
+                "schoolid": 1,
+                "address": "sh",
+                "shdesc": "1",
+                "longitude": null,
+                "latitude": null,
+                "sctype": 0,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 1
+                },
+                "sceneryTitle": "三好屋"
+            }
+        ]
+    }
+}
+
+34、拍照后答题,get
+http://127.0.0.1:8360/api/question/getQuestionbyActid?id=1
+Return :
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "activityid": 1,
+        "sceneryid": 1,
+        "questionid": 3,
+        "questionTitle": "三好屋建设于那年？",
+        "questionType": 0,
+        "answerA": "1956年",
+        "answerB": "1965年",
+        "answerC": "1912年",
+        "answerD": "1987年",
+        "rightAnswer": "A"
+    }
+}
