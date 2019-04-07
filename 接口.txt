@@ -885,3 +885,10 @@ return
     ]
 }
 
+41、生成图片验证码
+http://127.0.0.1:8360/api/auth/createCaptcha?v="+Math.random()
+使用方法见：demo/qr.html
+
+42、后端登录接口,post
+http://127.0.0.1:8360/api/auth/adminLogin
+使用方法见：demo/qr.html
