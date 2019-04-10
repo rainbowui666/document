@@ -197,6 +197,7 @@ http://127.0.0.1:8360/api/school/addEdit
 "latitude":”123.34.556.433”,
 "soundurl":”http://aaa.com/aa.mp3”,
 "videourl":”http://aaa.com/aa.mp4”,
+"areaid":"10",
 "parentid": 47 // 本条是分校区
 
 }
