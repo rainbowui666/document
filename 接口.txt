@@ -893,3 +893,77 @@ http://127.0.0.1:8360/api/auth/createCaptcha?v="+Math.random()
 42、后端登录接口,post
 http://127.0.0.1:8360/api/auth/adminLogin
 使用方法见：demo/qr.html
+
+43、获取上海区域,get
+http://127.0.0.1:8360/api/school/getArea
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": [
+        {
+            "areaid": 1,
+            "areaname": "黄浦区"
+        },
+        {
+            "areaid": 2,
+            "areaname": "虹口区"
+        },
+        {
+            "areaid": 3,
+            "areaname": "杨浦区"
+        },
+        {
+            "areaid": 4,
+            "areaname": "闸北区"
+        },
+        {
+            "areaid": 5,
+            "areaname": "普陀区"
+        },
+        {
+            "areaid": 6,
+            "areaname": "长宁区"
+        },
+        {
+            "areaid": 7,
+            "areaname": "奉贤区"
+        },
+        {
+            "areaid": 8,
+            "areaname": "金山区"
+        },
+        {
+            "areaid": 9,
+            "areaname": "松江区"
+        },
+        {
+            "areaid": 10,
+            "areaname": "青浦区"
+        },
+        {
+            "areaid": 11,
+            "areaname": "嘉定区"
+        },
+        {
+            "areaid": 12,
+            "areaname": "宝山区"
+        },
+        {
+            "areaid": 13,
+            "areaname": "崇明县"
+        },
+        {
+            "areaid": 14,
+            "areaname": "静安区"
+        },
+        {
+            "areaid": 15,
+            "areaname": "徐汇区"
+        },
+        {
+            "areaid": 16,
+            "areaname": "浦东新区"
+        }
+    ]
+}
+
