@@ -349,7 +349,7 @@ http://127.0.0.1:8360/api/discuss/add?distype=3&studentid=1&targetid=0
 "content":"good."
 }
 
-25、留言列表，get，distype,留言类型0,景点; 1,活动,2 学校,3首页,distype为0时对应sceneryid,1时对应activityID, 2学校schoolid必须要传其中一个
+25、留言列表，get，distype(可选),留言类型0,景点; 1,活动,2 学校,3首页,distype为0时对应sceneryid,1时对应activityID, 2学校schoolid必须要传其中一个
 http://127.0.0.1:8360/api/discuss/list?pageindex=1&pagesize=10
 可传参数：shstate=1&distype=1&sceneryid=1&activityid&schoolid=1
 返回：
@@ -1055,6 +1055,59 @@ http://127.0.0.1:8360/api/school/getSchoolList?page=1&size=5&schoolname=复旦大学
                         "picdesc": null
                     }
                 ]
+            }
+        ]
+    }
+}
+
+46、根据学校ID，获取学校管理员接口，get
+http://127.0.0.1:8360/api/user/getUserListBySchoolid?schoolid=1
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": [
+        {
+            "sysUserID": 7,
+            "userName": "kkkkbx",
+            "pwd": "123456",
+            "usertype": 1,
+            "schoolid": 1,
+            "shstate": 0
+        }
+    ]
+}
+
+47、查找student列表,post
+http://127.0.0.1:8360/api/student/getStudentList
+{
+	"stuno":"0",
+	"studentname":"kbx",
+	"tel":"18601011111",
+	"wxchat":"kbx"
+}
+Return:
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "pageindex": 1,
+        "pagesize": 10,
+        "data": [
+            {
+                "studentID": 1,
+                "studentName": "kbx",
+                "sex": 0,
+                "wxchat": "kbx",
+                "tel": "18601011111",
+                "stuNo": 0,
+                "IDCard": "420222222222",
+                "birthday": "2018-09-20",
+                "schoolid": 1,
+                "photo": "http://wxchat.qq.com/src/333.jpg",
+                "shstate": 0,
+                "pwd": "123456",
+                "wxopenid": "fdafa-2333-afasfd",
+                "nickname": "kbx"
             }
         ]
     }
