@@ -1,34 +1,25 @@
 1、删除用户
-http://127.0.0.1:8360/api/User/delete?id=3
-
-2、修改用户
-http://127.0.0.1:8360/api/User/save?userName=kkkkbx&pwd=123456&roleid=1&id=3
-
-3、新增用户
-http://127.0.0.1:8360/api/User/save?userName=kkkkbx&pwd=123456&roleid=1
-
-4、添加/修改角色
-http://127.0.0.1:8360/api/role/save?rolename=超级管理员
-
-http://127.0.0.1:8360/api/role/save?rolename=超级管理员&id=1
-
-5、删除角色
-http://127.0.0.1:8360/api/role/delete?id=1
-
-6、添加/修改权限
-http://127.0.0.1:8360/api/permission/save?permissionname=学校管理&roleid=1
-
-http://127.0.0.1:8360/api/permission/save?permissionname=学校管理&roleid=1&id=1
-
-7、删除权限
-http://127.0.0.1:8360/api/permission/delete?id=1
-
-7.1 给权限分配学校,get
-http://127.0.0.1:8360/api/permission/assignSchool?schoolid=2&permissionid=2
+http://127.0.0.1:8360/api/User/delete?userid=3
 
 
-8、学校列表
-http://127.0.0.1:8360/api/school/index?page=1&size=5&schoolname=复旦大学
+
+3、新增用户/修改用户,post
+usertype:0，学校管理员;1, 超级管理员,
+shstate: 0有效，默认，1删除,
+Schooled: 学校id,可以不传
+http://127.0.0.1:8360/api/User/save
+{
+userName:kkkkbx,
+pwd:'123456',
+usertype:0,
+schooled:1,
+Shstate: 0
+}
+
+
+
+8、学校列表,get, areaid 对应区域表id
+http://127.0.0.1:8360/api/school/index?page=1&size=5&schoolname=复旦大学&areaid=1
 {
     "errno": 0,
     "errmsg": "",
@@ -39,18 +30,22 @@ http://127.0.0.1:8360/api/school/index?page=1&size=5&schoolname=复旦大学
         "currentPage": 1,
         "data": [
             {
-                "schoolID": 1,
+                schoolID": 1,
                 "schoolName": "复旦大学",
                 "province": "sh",
                 "city": "sh",
                 "address": "政通路255号",
                 "schooldesc": "复旦大学",
                 "shstate": {
-                    "checkin": 0, // 签到
-                    "wantto": 0, // 想去
-                    "sharenum": 0, // 分享
-                    "disnum": 0 // 留言
+                    "wantto": 0,
+                    "disnum": 0
                 },
+                "longitude": null,
+                "latitude": null,
+                "soundurl": null,
+                "videourl": null,
+                "parentid": 0,
+                "areaid": null,
                 "pics": [ //图片
                     {
                         "sourceID": 4,
@@ -1003,6 +998,7 @@ http://127.0.0.1:8360/api/activity/list?pageindex=1&pagesize=5
                 "isGroup": 1,
                 "groupNum": 10,
                 "createDate": "2019-03-25 21:01:54",
+		"createbyuserid": 1,
                 "pics": [
                     {
                         "sourceID": 47,
@@ -1022,3 +1018,46 @@ http://127.0.0.1:8360/api/activity/list?pageindex=1&pagesize=5
     }
 }
 
+45、后台学校列表,get
+http://127.0.0.1:8360/api/school/getSchoolList?page=1&size=5&schoolname=复旦大学&areaid=1
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "count": 1,
+        "totalPages": 1,
+        "pageSize": 5,
+        "currentPage": 1,
+        "data": [
+            {
+                schoolID": 1,
+                "schoolName": "复旦大学",
+                "province": "sh",
+                "city": "sh",
+                "address": "政通路255号",
+                "schooldesc": "复旦大学",
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 0
+                },
+                "longitude": null,
+                "latitude": null,
+                "soundurl": null,
+                "videourl": null,
+                "parentid": 0,
+                "areaid": null,
+                "pics": [ //图片
+                    {
+                        "sourceID": 4,
+                        "sourceType": 1,
+                        "sourceAddress": "src/aaa.jpg",
+                        "createDate": "2019-03-18 22:35:50",
+                        "targetid": 1,
+                        "shstate": 0,
+                        "picdesc": null
+                    }
+                ]
+            }
+        ]
+    }
+}
