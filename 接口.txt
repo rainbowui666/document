@@ -654,15 +654,30 @@ http://127.0.0.1:8360/api/activity/getActivityDiscussList?id=1
 }
 
 33、活动参与景点列表,get
-http://127.0.0.1:8360/api/activity/getActivitySceneryList?pageindex=1&pagesize=5
+http://127.0.0.1:8360/api/activity/getActivitySceneryList?pageindex=1&pagesize=5&activityid=1
 Return:
-
 {
     "errno": 0,
     "errmsg": "",
     "data": {
         "pageindex": "1",
-        "pagesize": "5",
+        "pagesize": "10",
+        "arrScenery": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+        ],
+        "arrSchool": [
+            1,
+            2,
+            8
+        ],
         "data": [
             {
                 "activityid": 1,
@@ -681,18 +696,19 @@ Return:
                     "wantto": 0,
                     "disnum": 1
                 },
-                "sceneryTitle": "三好屋"
+                "sceneryTitle": "三好屋",
+                "pics": []
             },
             {
                 "activityid": 1,
-                "sceneryid": 1,
+                "sceneryid": 2,
                 "questionid": 2,
                 "activityName": "高校一日游",
                 "startSceneryid": 1,
                 "endSceneryid": 1,
-                "schoolid": 1,
+                "schoolid": 2,
                 "address": "sh",
-                "shdesc": "1",
+                "shdesc": "中共一大会址纪念馆",
                 "longitude": null,
                 "latitude": null,
                 "sctype": 0,
@@ -700,7 +716,148 @@ Return:
                     "wantto": 0,
                     "disnum": 1
                 },
-                "sceneryTitle": "三好屋"
+                "sceneryTitle": "中共一大会址纪念馆",
+                "pics": []
+            },
+            {
+                "activityid": 1,
+                "sceneryid": 3,
+                "questionid": 3,
+                "activityName": "高校一日游",
+                "startSceneryid": 1,
+                "endSceneryid": 1,
+                "schoolid": 1,
+                "address": "sh",
+                "shdesc": "中共二大会址纪念馆",
+                "longitude": null,
+                "latitude": null,
+                "sctype": 0,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 1
+                },
+                "sceneryTitle": "中共二大会址纪念馆",
+                "pics": []
+            },
+            {
+                "activityid": 1,
+                "sceneryid": 4,
+                "questionid": 2,
+                "activityName": "高校一日游",
+                "startSceneryid": 1,
+                "endSceneryid": 1,
+                "schoolid": 2,
+                "address": "sh",
+                "shdesc": "陈云故居记青浦革命历史纪念馆",
+                "longitude": null,
+                "latitude": null,
+                "sctype": 0,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 1
+                },
+                "sceneryTitle": "陈云故居记青浦革命历史纪念馆",
+                "pics": []
+            },
+            {
+                "activityid": 1,
+                "sceneryid": 5,
+                "questionid": 3,
+                "activityName": "高校一日游",
+                "startSceneryid": 1,
+                "endSceneryid": 1,
+                "schoolid": 8,
+                "address": "sh",
+                "shdesc": "上海陈毅广场",
+                "longitude": null,
+                "latitude": null,
+                "sctype": 0,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 1
+                },
+                "sceneryTitle": "上海陈毅广场",
+                "pics": []
+            },
+            {
+                "activityid": 1,
+                "sceneryid": 6,
+                "questionid": 2,
+                "activityName": "高校一日游",
+                "startSceneryid": 1,
+                "endSceneryid": 1,
+                "schoolid": 8,
+                "address": "sh",
+                "shdesc": "龙华烈士林园",
+                "longitude": null,
+                "latitude": null,
+                "sctype": 0,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 1
+                },
+                "sceneryTitle": "龙华烈士林园",
+                "pics": []
+            },
+            {
+                "activityid": 1,
+                "sceneryid": 7,
+                "questionid": 3,
+                "activityName": "高校一日游",
+                "startSceneryid": 1,
+                "endSceneryid": 1,
+                "schoolid": 8,
+                "address": "sh",
+                "shdesc": "上海翟秋白故居",
+                "longitude": null,
+                "latitude": null,
+                "sctype": 0,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 1
+                },
+                "sceneryTitle": "上海翟秋白故居",
+                "pics": []
+            },
+            {
+                "activityid": 1,
+                "sceneryid": 8,
+                "questionid": 2,
+                "activityName": "高校一日游",
+                "startSceneryid": 1,
+                "endSceneryid": 1,
+                "schoolid": 2,
+                "address": "sh",
+                "shdesc": "上海毛泽东故居",
+                "longitude": null,
+                "latitude": null,
+                "sctype": 0,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 1
+                },
+                "sceneryTitle": "上海毛泽东故居",
+                "pics": []
+            },
+            {
+                "activityid": 1,
+                "sceneryid": 9,
+                "questionid": 3,
+                "activityName": "高校一日游",
+                "startSceneryid": 1,
+                "endSceneryid": 1,
+                "schoolid": 1,
+                "address": "sh",
+                "shdesc": "宋庆龄故居",
+                "longitude": null,
+                "latitude": null,
+                "sctype": 0,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 1
+                },
+                "sceneryTitle": "宋庆龄故居",
+                "pics": []
             }
         ]
     }
@@ -1112,3 +1269,9 @@ Return:
         ]
     }
 }
+
+48、删除单张图片,get
+http://127.0.0.1:8360/api/source/delete?sourceid=5
+
+49、前台活动参与景点签到,get
+http://127.0.0.1:8360/api/attention_activity/attentionActivity?studentid=1&sceneryid=1&activityid=1&shstate=1
