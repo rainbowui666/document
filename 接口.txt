@@ -1,5 +1,5 @@
 1、删除用户
-http://127.0.0.1:8360/api/User/delete?userid=3
+http://127.0.0.1:8360/api/user/delete?userid=3
 
 
 
@@ -7,13 +7,11 @@ http://127.0.0.1:8360/api/User/delete?userid=3
 usertype:0，学校管理员;1, 超级管理员,
 shstate: 0有效，默认，1删除,
 Schooled: 学校id,可以不传
-http://127.0.0.1:8360/api/User/save
+http://127.0.0.1:8360/api/user/save
 {
-userName:kkkkbx,
-pwd:'123456',
-usertype:0,
-schooled:1,
-Shstate: 0
+"userName":"admin",
+"pwd":"123456",
+"usertype":1
 }
 
 
