@@ -1280,3 +1280,19 @@ http://127.0.0.1:8360/api/attention_activity/attentionActivity?studentid=1&scene
 
 50、后台退出登录,get
 http://127.0.0.1:8360/api/auth/adminLogout
+
+51、根据sysuserid获取用户信息,get
+http://127.0.0.1:8360/api/auth/getUserInfo?sysuserid=1
+Return
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "sysUserID": 1,
+        "userName": "ddd",
+        "pwd": "123456",
+        "usertype": 0,
+        "schoolid": null,
+        "shstate": 0
+    }
+}
