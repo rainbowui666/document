@@ -61,7 +61,7 @@ http://127.0.0.1:8360/api/school/index?page=1&size=5&schoolname=复旦大学&areaid=
 }
 
 9、学校详情
-http://127.0.0.1:8360/api/school/detail?id=1
+http://127.0.0.1:8360/api/school/detail?schoolid=1
 {
     "errno": 0,
     "errmsg": "",
@@ -357,19 +357,11 @@ http://127.0.0.1:8360/api/discuss/list?pageindex=1&pagesize=10
     "errno": 0,
     "errmsg": "",
     "data": {
+        "counta": 3,
+        "pagecount": 1,
         "pageindex": "1",
         "pagesize": "10",
         "data": [
-            {
-                "discussID": 4,
-                "studentName": "kbx",
-                "distype": 0,
-                "targetid": 1,
-                "studentid": 1,
-                "content": "这个景点很美，就是乱扔垃圾的人太多.",
-                "shstate": 0,
-                "targetaddress": "三好屋"
-            },
             {
                 "discussID": 5,
                 "studentName": "kbx",
@@ -377,8 +369,28 @@ http://127.0.0.1:8360/api/discuss/list?pageindex=1&pagesize=10
                 "targetid": 1,
                 "studentid": 1,
                 "content": "这个景点很美，就是乱扔垃圾的人太多.",
-                "shstate": 0,
+                "shstate": 1,
                 "targetaddress": "高校一日游"
+            },
+            {
+                "discussID": 4,
+                "studentName": "kbx",
+                "distype": 0,
+                "targetid": 1,
+                "studentid": 1,
+                "content": "这个景点很美，就是乱扔垃圾的人太多.",
+                "shstate": 1,
+                "targetaddress": "三好屋"
+            },
+            {
+                "discussID": 3,
+                "studentName": "kbx",
+                "distype": 3,
+                "targetid": 0,
+                "studentid": 1,
+                "content": "good.",
+                "shstate": 1,
+                "targetaddress": "APP首页"
             }
         ]
     }
@@ -985,29 +997,58 @@ Return
 {
     "errno": 0,
     "errmsg": "",
-    "data": [
-        {
-            "studentid": 1,
-            "sceneryid": 1,
-            "shstate": 1,
-            "createdate": "2019-04-02 07:34:02",
-            "schoolid": 1,
-            "longitude": null,
-            "latitude": null,
-            "sceneryTitle": "三好屋",
-            "pics": [
-                {
-                    "sourceID": 4,
-                    "sourceType": 1,
-                    "sourceAddress": "src/aaa.jpg",
-                    "createDate": "2019-03-18 22:35:50",
-                    "targetid": 1,
-                    "shstate": 0,
-                    "picdesc": null
-                }
-            ]
-        }
-    ]
+    "data": {
+        "counta": 4,
+        "pagecount": 1,
+        "pageindex": "1",
+        "pagesize": "5",
+        "data": [
+            {
+                "studentid": 1,
+                "sceneryid": 1,
+                "shstate": 1,
+                "createdate": "2019-04-02 07:34:02",
+                "schoolid": 1,
+                "longitude": null,
+                "latitude": null,
+                "sceneryTitle": "三好屋",
+                "pics": []
+            },
+            {
+                "studentid": 1,
+                "sceneryid": 2,
+                "shstate": 1,
+                "createdate": "2019-04-14 21:50:35",
+                "schoolid": 2,
+                "longitude": null,
+                "latitude": null,
+                "sceneryTitle": "中共一大会址纪念馆",
+                "pics": []
+            },
+            {
+                "studentid": 1,
+                "sceneryid": 4,
+                "shstate": 1,
+                "createdate": "2019-04-14 21:50:44",
+                "schoolid": 2,
+                "longitude": null,
+                "latitude": null,
+                "sceneryTitle": "陈云故居记青浦革命历史纪念馆",
+                "pics": []
+            },
+            {
+                "studentid": 1,
+                "sceneryid": 5,
+                "shstate": 1,
+                "createdate": "2019-04-14 21:50:55",
+                "schoolid": 8,
+                "longitude": null,
+                "latitude": null,
+                "sceneryTitle": "上海陈毅广场",
+                "pics": []
+            }
+        ]
+    }
 }
 
 40、我的活动,get
@@ -1016,30 +1057,26 @@ return
 {
     "errno": 0,
     "errmsg": "",
-    "data": [
-        {
-            "studentID": 1,
-            "activityid": 1,
-            "shstate": 1,
-            "createdate": null,
-            "activityName": "高校一日游",
-            "sponsor": "上海大学",
-            "startDate": "2019-03-15 00:00:00",
-            "endDate": "2019-04-15 00:00:00",
-            "pics": [
-                {
-                    "sourceID": 47,
-                    "sourceType": 2,
-                    "sourceAddress": "/static/upload/6cbc191a-791f-451a-8182-7d1a08b94ce5.jpg",
-                    "createDate": "2019-03-23 22:58:01",
-                    "targetid": 1,
-                    "shstate": 0,
-                    "picdesc": null
-                }
-            ],
-            "hasjoin": "已报名"
-        }
-    ]
+    "data": {
+        "counta": 1,
+        "pagecount": 1,
+        "pageindex": "1",
+        "pagesize": "5",
+        "data": [
+            {
+                "studentID": 1,
+                "activityid": 1,
+                "shstate": 1,
+                "createdate": null,
+                "activityName": "高校一日游",
+                "sponsor": "上海大学",
+                "startDate": "2019-03-15 00:00:00",
+                "endDate": "2019-04-15 00:00:00",
+                "pics": [],
+                "hasjoin": "已完成"
+            }
+        ]
+    }
 }
 
 41、生成图片验证码
