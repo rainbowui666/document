@@ -253,6 +253,7 @@ http://127.0.0.1:8360/api/activity/addEdit1?id=1
             "meetingplace":"上海大学正门口",
             "secondsponsor":"上海教育局",
             "needschoolrang":"1,2,8",
+"needSceneryRang":"1,2,3,4",
             "startdate":"2019-03-15",
             "enddate":"2019-04-15",
             "shdesc":"高校一日游,感受高等学府氛围",
@@ -1332,4 +1333,91 @@ Return
         "schoolid": null,
         "shstate": 0
     }
+}
+
+52、根据学校ids获取对应的景点,get
+http://127.0.0.1:8360/api/scenery/getSceneryListBySchoolids?schoolids=1,8
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": [
+        {
+            "sceneryID": 1,
+            "schoolid": 1,
+            "address": "sh",
+            "shdesc": "1",
+            "longitude": null,
+            "latitude": null,
+            "sctype": 0,
+            "shstate": 1,
+            "sceneryTitle": "三好屋",
+            "soundurl": null,
+            "videourl": null
+        },
+        {
+            "sceneryID": 3,
+            "schoolid": 1,
+            "address": "sh",
+            "shdesc": "中共二大会址纪念馆",
+            "longitude": null,
+            "latitude": null,
+            "sctype": 0,
+            "shstate": 0,
+            "sceneryTitle": "中共二大会址纪念馆",
+            "soundurl": null,
+            "videourl": null
+        },
+        {
+            "sceneryID": 5,
+            "schoolid": 8,
+            "address": "sh",
+            "shdesc": "上海陈毅广场",
+            "longitude": null,
+            "latitude": null,
+            "sctype": 0,
+            "shstate": 0,
+            "sceneryTitle": "上海陈毅广场",
+            "soundurl": null,
+            "videourl": null
+        },
+        {
+            "sceneryID": 6,
+            "schoolid": 8,
+            "address": "sh",
+            "shdesc": "龙华烈士林园",
+            "longitude": null,
+            "latitude": null,
+            "sctype": 0,
+            "shstate": 0,
+            "sceneryTitle": "龙华烈士林园",
+            "soundurl": null,
+            "videourl": null
+        },
+        {
+            "sceneryID": 7,
+            "schoolid": 8,
+            "address": "sh",
+            "shdesc": "上海翟秋白故居",
+            "longitude": null,
+            "latitude": null,
+            "sctype": 0,
+            "shstate": 0,
+            "sceneryTitle": "上海翟秋白故居",
+            "soundurl": null,
+            "videourl": null
+        },
+        {
+            "sceneryID": 9,
+            "schoolid": 1,
+            "address": "sh",
+            "shdesc": "宋庆龄故居",
+            "longitude": null,
+            "latitude": null,
+            "sctype": 0,
+            "shstate": 0,
+            "sceneryTitle": "宋庆龄故居",
+            "soundurl": null,
+            "videourl": null
+        }
+    ]
 }
