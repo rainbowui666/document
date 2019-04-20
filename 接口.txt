@@ -1424,3 +1424,24 @@ http://127.0.0.1:8360/api/scenery/getSceneryListBySchoolids?schoolids=1,8
 
 53、上传excel ,import.html
 http://127.0.0.1:8360/api/importExcel/import
+
+54、后台活动2，获取question详细信息,get
+http://127.0.0.1:8360/api/activity/getActivityQuestionDetail?activityid=1&questionid=2
+Return
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "questionID": 2,
+        "questiontitle": "三好屋建设于那年？",
+        "answera": "1956年",
+        "answerb": "1965年",
+        "answerc": "1912年",
+        "answerd": "1987年",
+        "rightanswer": "A",
+        "sceneryid": 2,
+        "activityid": 1,
+        "sceneryTitle": "中共一大会址纪念馆",
+        "startAddress": "上海大学门口"
+    }
+}
