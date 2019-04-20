@@ -17,7 +17,7 @@ http://127.0.0.1:8360/api/user/save
 
 
 8、学校列表,get, areaid 对应区域表id
-http://127.0.0.1:8360/api/school/index?page=1&size=5&schoolname=复旦大学&areaid=1
+http://127.0.0.1:8360/api/school/index?pageindex=1&pagesize=5&schoolname=复旦大学&areaid=1
 {
     "errno": 0,
     "errmsg": "",
@@ -106,7 +106,7 @@ http://127.0.0.1:8360/api/school/detail?schoolid=1
 }
 
 10、景点列表
-http://127.0.0.1:8360/api/scenery/index?page=1&size=5
+http://127.0.0.1:8360/api/scenery/index?pageindex=1&pagesize=5
 {
     "errno": 0,
     "errmsg": "",
@@ -282,7 +282,7 @@ http://127.0.0.1:8360/api/activity/addEdit2?activityid=1&id=2
         }
 
 20、活动2列表,get
-http://127.0.0.1:8360/api/activity/list2?page=1&size=5
+http://127.0.0.1:8360/api/activity/list2?pageindex=1&pagesize=5&activityid=1
 返回
 {
     "errno": 0,
@@ -522,7 +522,7 @@ http://127.0.0.1:8360/api/scenery/getscenerydetail?id=1
 http://127.0.0.1:8360/api/student_scenery/addEdit?studentid=1&sceneryid=1&shstate=1
 
 29、前台活动列表,get
-http://127.0.0.1:8360/api/activity/frontList?page=1&size=5&studentid=1
+http://127.0.0.1:8360/api/activity/frontList?pageindex=1&pagesize=5&studentid=1
 
 {
     "errno": 0,
@@ -1214,7 +1214,7 @@ http://127.0.0.1:8360/api/activity/list?pageindex=1&pagesize=5
 }
 
 45、后台学校列表,get
-http://127.0.0.1:8360/api/school/getSchoolList?page=1&size=5&schoolname=复旦大学&areaid=1
+http://127.0.0.1:8360/api/school/getSchoolList?pageindex=1&pagesize=5&schoolname=复旦大学&areaid=1
 {
     "errno": 0,
     "errmsg": "",
