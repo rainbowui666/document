@@ -1447,6 +1447,9 @@ Return
 }
 
 55、根据targetid和sourcetype获取图片列表,get
+http://127.0.0.1:8360/api/source/getListBytargetidAndSourceType?targetid=47&sourcetype=0
+Return
+
 {
     "errno": 0,
     "errmsg": "",
