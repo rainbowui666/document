@@ -1445,3 +1445,44 @@ Return
         "startAddress": "上海大学门口"
     }
 }
+
+55、根据targetid和sourcetype获取图片列表,get
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "count": 3,
+        "totalPages": 1,
+        "pageSize": 10,
+        "currentPage": 1,
+        "data": [
+            {
+                "sourceID": 62,
+                "sourceType": 0,
+                "sourceAddress": "acb4f758-f609-4959-8145-1debc162c6f4.jpg",
+                "createDate": "2019-04-14 17:40:32",
+                "targetid": 47,
+                "shstate": 0,
+                "picdesc": null
+            },
+            {
+                "sourceID": 63,
+                "sourceType": 0,
+                "sourceAddress": "61264e9f-5642-4547-836e-e4e18684901e.jpg",
+                "createDate": "2019-04-14 17:40:32",
+                "targetid": 47,
+                "shstate": 0,
+                "picdesc": null
+            },
+            {
+                "sourceID": 64,
+                "sourceType": 0,
+                "sourceAddress": "058d28b4-43b5-447d-9f0b-ee87f6972221.jpg",
+                "createDate": "2019-04-14 17:40:32",
+                "targetid": 47,
+                "shstate": 0,
+                "picdesc": null
+            }
+        ]
+    }
+}
