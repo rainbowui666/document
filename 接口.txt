@@ -222,8 +222,8 @@ http://127.0.0.1:8360/admin/scenery/addEdit
  "longitude":”123.34.556.433”,
 "latitude":”123.34.556.433”,
 "soundurl":”http://aaa.com/aa.mp3”,
-"videourl":”http://aaa.com/aa.mp4”
-
+"videourl":”http://aaa.com/aa.mp4”,
+"isrecommend":1
 }
 
 addEdit?id=xxx，带id是编辑
@@ -273,7 +273,8 @@ http://127.0.0.1:8360/admin/activity/addEdit1?id=1
             "settingend":1,
             "endsceneryid":1,
             "isgroup":1,
-            "groupnum":10
+            "groupnum":10,
+"isrecommend":1
         }
 
 19、添加/修改活动2,post,activityid活动id,必填，id修改时传
@@ -406,7 +407,7 @@ http://127.0.0.1:8360/api/discuss/list?pageindex=1&pagesize=10
 
 25、修改，审批，受理留言
 0,默认待审核;1,审核通过，2，删除,3受理，4拒绝
-http://127.0.0.1:8360/admin/discuss/update?id=3&shstate=1
+http://127.0.0.1:8360/admin/discuss/update?id=3&shstate=1&isrecommend=1
 
 26、首页-搜索学校或景点,get
 http://127.0.0.1:8360/api/search/searchList?pageindex=1&pagesize=5&keyword=大学
@@ -1492,6 +1493,115 @@ Return
                 "targetid": 47,
                 "shstate": 0,
                 "picdesc": null
+            }
+        ]
+    }
+}
+
+56、首页景点推荐和活动推荐：get
+http://127.0.0.1:8360/api/index/home
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "activitydata": [
+            {
+                "activityID": 1,
+                "activityName": "test1",
+                "pics": [],
+                "joinnum": 1
+            }
+        ],
+        "scenerydata": [
+            {
+                "sceneryID": 9,
+                "sceneryTitle": "宋庆龄故居",
+                "pics": [],
+                "joinnum": 0
+            },
+            {
+                "sceneryID": 8,
+                "sceneryTitle": "上海毛泽东故居",
+                "pics": [],
+                "joinnum": 0
+            },
+            {
+                "sceneryID": 7,
+                "sceneryTitle": "上海翟秋白故居",
+                "pics": [],
+                "joinnum": 0
+            },
+            {
+                "sceneryID": 6,
+                "sceneryTitle": "龙华烈士林园",
+                "pics": [],
+                "joinnum": 0
+            },
+            {
+                "sceneryID": 5,
+                "sceneryTitle": "上海陈毅广场",
+                "pics": [],
+                "joinnum": 1
+            }
+        ]
+    }
+}
+
+57、首页精选评论,get
+http://127.0.0.1:8360/api/discuss/homeDiscuss?pageindex=1&pagesize=1
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "count": 3,
+        "totalPages": 1,
+        "pageSize": 5,
+        "currentPage": 1,
+        "data": [
+            {
+                "discussID": 5,
+                "distype": 1,
+                "targetid": 1,
+                "studentid": 1,
+                "content": "这个景点很美，就是乱扔垃圾的人太多.",
+                "shstate": 1,
+                "createdate": "2019-03-27 21:14:11",
+                "isrecommend": 0,
+                "pics": [],
+                "poto": {
+                    "photo": "http://wxchat.qq.com/src/333.jpg",
+                    "studentName": "kbx"
+                }
+            },
+            {
+                "discussID": 4,
+                "distype": 0,
+                "targetid": 1,
+                "studentid": 1,
+                "content": "这个景点很美，就是乱扔垃圾的人太多.",
+                "shstate": 1,
+                "createdate": "2019-03-27 21:07:44",
+                "isrecommend": 0,
+                "pics": [],
+                "poto": {
+                    "photo": "http://wxchat.qq.com/src/333.jpg",
+                    "studentName": "kbx"
+                }
+            },
+            {
+                "discussID": 3,
+                "distype": 3,
+                "targetid": 0,
+                "studentid": 1,
+                "content": "good.",
+                "shstate": 1,
+                "createdate": "2019-03-27 21:04:31",
+                "isrecommend": 0,
+                "pics": [],
+                "poto": {
+                    "photo": "http://wxchat.qq.com/src/333.jpg",
+                    "studentName": "kbx"
+                }
             }
         ]
     }
