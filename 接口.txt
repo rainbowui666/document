@@ -1,5 +1,5 @@
 1¡¢É¾³ıÓÃ»§,get
-http://127.0.0.1:8360/admin/user/delete?userid=3
+http://127.0.0.1:8360/api/admin/user/delete?userid=3
 beforeSend: function(request) {  
    request.setRequestHeader("x-hsyj-token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NTYxMDkxMTR9.pdA-vunZ_ll9ohQTCAOXo3u4qRIm4cn2eYEwvodCH8Y");  
 },
@@ -14,7 +14,7 @@ beforeSend: function(request) {
    request.setRequestHeader("x-hsyj-token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1NTYxMDkxMTR9.pdA-vunZ_ll9ohQTCAOXo3u4qRIm4cn2eYEwvodCH8Y");  
 }
 
-http://127.0.0.1:8360/admin/user/save
+http://127.0.0.1:8360/api/admin/user/save
 {
 "userName":"admin",
 "pwd":"123456",
@@ -68,7 +68,7 @@ http://127.0.0.1:8360/api/school/index?pageindex=1&pagesize=5&schoolname=¸´µ©´óÑ
 }
 
 9¡¢Ñ§Ğ£ÏêÇé
-http://127.0.0.1:8360/admin/school/detail?schoolid=1
+http://127.0.0.1:8360/api/school/detail?schoolid=1
 {
     "errno": 0,
     "errmsg": "",
@@ -189,7 +189,7 @@ http://127.0.0.1:8360/api/scenery/detail?id=1 (delete)
 }
 
 12¡¢Ìí¼Ó/ĞŞ¸ÄÑ§Ğ££¬post
-http://127.0.0.1:8360/admin/school/addEdit
+http://127.0.0.1:8360/api/admin/school/addEdit
 {
 					"schoolname":"ÉÏº£´óÑ§",
                     "province": "ÉÏº£",
@@ -209,10 +209,10 @@ http://127.0.0.1:8360/admin/school/addEdit
 addEdit?id=xxx£¬´øidÊÇ±à¼­
 
 13¡¢É¾³ıÑ§Ğ£,get
-http://127.0.0.1:8360/admin/school/delete?id=47
+http://127.0.0.1:8360/api/admin/school/delete?id=47
 
 14¡¢Ìí¼Ó/ĞŞ¸Ä¾°µã£¬post
-http://127.0.0.1:8360/admin/scenery/addEdit
+http://127.0.0.1:8360/api/admin/scenery/addEdit
 {
 		    "scenerytitle":"ÉÏº£´óÑ§Òİ·òÂ¥",
                     "schoolid": 47,
@@ -229,10 +229,10 @@ http://127.0.0.1:8360/admin/scenery/addEdit
 addEdit?id=xxx£¬´øidÊÇ±à¼­
 
 15¡¢É¾³ı¾°µã,get
-http://127.0.0.1:8360/admin/scenery/delete?id=47
+http://127.0.0.1:8360/api/admin/scenery/delete?id=47
 
 16¡¢Ìí¼ÓĞŞ¸ÄÑ§Éú
-http://127.0.0.1:8360/admin/student/addEdit?id=1, POST
+http://127.0.0.1:8360/api/admin/student/addEdit?id=1, POST
 {
 			"studentname":"kbx",
             "wxchat": "kbx",
@@ -250,10 +250,10 @@ http://127.0.0.1:8360/admin/student/addEdit?id=1, POST
 }
 
 17¡¢É¾³ı/½â°óÑ§Éú,get, shstate: 0£¬ÓĞĞ§£¬1£¬É¾³ı£¬2£¬°ó¶¨£¬3£¬½â°ó
-http://127.0.0.1:8360/admin/student/delete?id=1&shstate=2
+http://127.0.0.1:8360/api/admin/student/delete?id=1&shstate=2
 
 18¡¢Ìí¼ÓĞŞ¸Ä»î¶¯1,post
-http://127.0.0.1:8360/admin/activity/addEdit1?id=1
+http://127.0.0.1:8360/api/admin/activity/addEdit1?id=1
 {
             "activityname":"¸ßĞ£Ò»ÈÕÓÎ",
             "sponsor":"ÉÏº£´óÑ§",
@@ -278,7 +278,7 @@ http://127.0.0.1:8360/admin/activity/addEdit1?id=1
         }
 
 19¡¢Ìí¼Ó/ĞŞ¸Ä»î¶¯2,post,activityid»î¶¯id,±ØÌî£¬idĞŞ¸ÄÊ±´«
-http://127.0.0.1:8360/admin/activity/addEdit2?activityid=1&id=2
+http://127.0.0.1:8360/api/admin/activity/addEdit2?activityid=1&id=2
 ²ÎÊı£º{
             "sceneryid":"1",
             "questiontitle":"ÈıºÃÎİ½¨ÉèÓÚÄÇÄê£¿",
@@ -332,10 +332,10 @@ http://127.0.0.1:8360/api/activity/list2?pageindex=1&pagesize=5&activityid=1
 }
 
 21¡¢É¾³ı/½â°ó»î¶¯,get
-http://127.0.0.1:8360/admin/activity/delete?id=1
+http://127.0.0.1:8360/api/admin/activity/delete?id=1
 
 22¡¢É¾³ı»î¶¯ÎÊÌâ,get
-http://127.0.0.1:8360/admin/activity/delete2?id=1
+http://127.0.0.1:8360/api/admin/activity/delete2?id=1
 
 23¡¢µÇÂ¼,post
 http://127.0.0.1:8360/api/auth/login
@@ -407,7 +407,7 @@ http://127.0.0.1:8360/api/discuss/list?pageindex=1&pagesize=10
 
 25¡¢ĞŞ¸Ä£¬ÉóÅú£¬ÊÜÀíÁôÑÔ
 0,Ä¬ÈÏ´ıÉóºË;1,ÉóºËÍ¨¹ı£¬2£¬É¾³ı,3ÊÜÀí£¬4¾Ü¾ø
-http://127.0.0.1:8360/admin/discuss/update?id=3&shstate=1&isrecommend=1
+http://127.0.0.1:8360/api/admin/discuss/update?id=3&shstate=1&isrecommend=1
 
 26¡¢Ê×Ò³-ËÑË÷Ñ§Ğ£»ò¾°µã,get
 http://127.0.0.1:8360/api/search/searchList?pageindex=1&pagesize=5&keyword=´óÑ§
@@ -1089,11 +1089,11 @@ return
 }
 
 41¡¢Éú³ÉÍ¼Æ¬ÑéÖ¤Âë
-http://127.0.0.1:8360/api/auth/createCaptcha?v="+Math.random()
+http://127.0.0.1:8360/api/admin/auth/createCaptcha?v="+Math.random()
 Ê¹ÓÃ·½·¨¼û£ºdemo/qr.html
 
 42¡¢ºó¶ËµÇÂ¼½Ó¿Ú,post
-http://127.0.0.1:8360/admin/auth/adminLogin
+http://127.0.0.1:8360/api/admin/auth/adminLogin
 Ê¹ÓÃ·½·¨¼û£ºdemo/qr.html
 
 43¡¢»ñÈ¡ÉÏº£ÇøÓò,get
@@ -1319,16 +1319,16 @@ Return:
 }
 
 48¡¢É¾³ıµ¥ÕÅÍ¼Æ¬,get
-http://127.0.0.1:8360/admin/source/delete?sourceid=5
+http://127.0.0.1:8360/api/admin/source/delete?sourceid=5
 
 49¡¢Ç°Ì¨»î¶¯²ÎÓë¾°µãÇ©µ½,get
 http://127.0.0.1:8360/api/attention_activity/attentionActivity?studentid=1&sceneryid=1&activityid=1&shstate=1
 
 50¡¢ºóÌ¨ÍË³öµÇÂ¼,get
-http://127.0.0.1:8360/admin/auth/adminLogout
+http://127.0.0.1:8360/api/admin/auth/adminLogout
 
 51¡¢¸ù¾İsysuserid»ñÈ¡ÓÃ»§ĞÅÏ¢,get
-http://127.0.0.1:8360/admin/auth/getUserInfo?sysuserid=1
+http://127.0.0.1:8360/api/admin/auth/getUserInfo?sysuserid=1
 Return
 {
     "errno": 0,
