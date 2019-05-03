@@ -1606,3 +1606,6 @@ http://127.0.0.1:8360/api/discuss/homeDiscuss?pageindex=1&pagesize=1
         ]
     }
 }
+
+58°¢¡Ù—‘µ„‘ﬁ,get
+http://127.0.0.1:8360/api/discuss/likediscuss?discussid=3
