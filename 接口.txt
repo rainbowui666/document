@@ -1609,3 +1609,101 @@ http://127.0.0.1:8360/api/discuss/homeDiscuss?pageindex=1&pagesize=1
 
 58、留言点赞,get
 http://127.0.0.1:8360/api/discuss/likediscuss?discussid=3
+
+59、图2，活动列表轮播图,get
+http://127.0.0.1:8360/api/activity/getSwipeAct
+Return:
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": [
+        {
+            "activityID": 4,
+            "activityName": "高校马拉松c",
+            "pics": [],
+            "joinnum": 0
+        },
+        {
+            "activityID": 3,
+            "activityName": "高校马拉松b",
+            "pics": [],
+            "joinnum": 0
+        },
+        {
+            "activityID": 2,
+            "activityName": "高校马拉松",
+            "pics": [],
+            "joinnum": 0
+        },
+        {
+            "activityID": 1,
+            "activityName": "高校一日游",
+            "pics": [],
+            "joinnum": 1
+        }
+    ]
+}
+
+60、根据学校id，获取对应校区,get
+http://127.0.0.1:8360/api/school/getChildSchool?schoolid=47
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": [
+        {
+            "schoolID": 172,
+            "schoolName": "上海大学aaa",
+            "province": "上海",
+            "city": "上海",
+            "address": "徐家汇",
+            "schooldesc": "上海大学aaa上海大学aaa上海大学aaa上海大学aaa上海大学aaa",
+            "shstate": 0,
+            "longitude": "123.34.556.433",
+            "latitude": "123.34.556.433",
+            "soundurl": "http://aaa.com/aa.mp3",
+            "videourl": "http://aaa.com/aa.mp4",
+            "parentid": 47,
+            "areaid": 10,
+            "createbyuserid": 7,
+            "ispublic": 1
+        }
+    ]
+}
+
+61、后台学校列表，学校管理员只能看自己创建的学校,get
+http://127.0.0.1:8360/admin/school/index
+Return
+
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "count": 1,
+        "totalPages": 1,
+        "pageSize": 10,
+        "currentPage": 1,
+        "data": [
+            {
+                "schoolID": 1,
+                "schoolName": "复旦大学",
+                "province": "sh",
+                "city": "sh",
+                "address": "政通路255号",
+                "schooldesc": "复旦大学",
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 0
+                },
+                "longitude": null,
+                "latitude": null,
+                "soundurl": null,
+                "videourl": null,
+                "parentid": 0,
+                "areaid": null,
+                "createbyuserid": 7,
+                "ispublic": 1,
+                "pics": []
+            }
+        ]
+    }
+}
