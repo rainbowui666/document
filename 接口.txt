@@ -67,7 +67,7 @@ http://127.0.0.1:8360/api/school/index?pageindex=1&pagesize=5&schoolname=∏¥µ©¥Û—
     }
 }
 
-9°¢—ß–£œÍ«È
+9°¢Õº3£¨—ß–£œÍ«È
 http://127.0.0.1:8360/api/school/detail?schoolid=1
 {
     "errno": 0,
@@ -529,7 +529,7 @@ http://127.0.0.1:8360/api/scenery/getscenerydetail?id=1
 // shstate,0œÎ»•£ª1«©µΩ£ª2»•π˝£ª3Õ∆ºˆ£ª4∑÷œÌ
 http://127.0.0.1:8360/api/student_scenery/addEdit?studentid=1&sceneryid=1&shstate=1
 
-29°¢«∞Ã®ªÓ∂Ø¡–±Ì,get
+29°¢Õº4£¨«∞Ã®ªÓ∂Ø¡–±Ì,get
 http://127.0.0.1:8360/api/activity/frontList?pageindex=1&pagesize=5&studentid=1
 
 {
@@ -584,10 +584,10 @@ http://127.0.0.1:8360/api/activity/frontList?pageindex=1&pagesize=5&studentid=1
 }
 
 
-30°¢ªÓ∂Ø«©µΩ,get, shstate 0œÎ»•£ª1«©µΩ£ª2»•π˝£ª3Õ∆ºˆ£ª4∑÷œÌ
+30°¢Õº5£¨ªÓ∂Ø«©µΩ,get, shstate 0œÎ»•£ª1«©µΩ£ª2»•π˝£ª3Õ∆ºˆ£ª4∑÷œÌ
 http://127.0.0.1:8360/api/student_activity/addEdit?studentid=1&activityid=1&shstate=1
 
-31°¢ªÓ∂ØœÍ«È“≥-∏ˆ»À≤Œ»¸∑Ω Ω£¨get
+31°¢Õº5£¨ªÓ∂ØœÍ«È“≥-∏ˆ»À≤Œ»¸∑Ω Ω£¨get
 http://127.0.0.1:8360/api/activity/getactivitydetail?id=1&studentid=1
 
 ∑µªÿ£∫
@@ -906,7 +906,7 @@ Return :
     }
 }
 
-35°¢¥¥Ω®Õ≈∂”,post
+35°¢Õº7,¥¥Ω®Õ≈∂”,post
 http://127.0.0.1:8360/api/group/addEdit
 Param:{
 	"id":1,
@@ -976,7 +976,7 @@ http://127.0.0.1:8360/api/activity/getactivitydetailForGroup?id=1&studentid=1
     }
 }
 
-37°¢º”»ÎÕ≈∂”,get
+37°¢Õº7£¨º”»ÎÕ≈∂”,get
 http://127.0.0.1:8360/api/group/joinGroup?groupid=1&studentid=1&activityid=1
 Return:
 {
@@ -1706,4 +1706,196 @@ Return
             }
         ]
     }
+}
+
+62°¢∫ÛÃ®ªÓ∂Ø¡–±Ì£¨—ß–£π‹¿Ì‘±÷ªƒ‹ø¥◊‘º∫¥¥Ω®µƒªÓ∂Ø,get
+http://127.0.0.1:8360/admin/activity/list?pageindex=1&pagesize=5
+Return
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "count": 4,
+        "totalPages": 1,
+        "pageSize": 5,
+        "currentPage": 1,
+        "data": [
+            {
+                "activityID": 4,
+                "activityName": "∏ﬂ–£¬Ì¿≠À…c",
+                "sponsor": "…œ∫£∏¥µ©¥Û—ß",
+                "meetingPlace": "…œ∫£∏¥µ©¥Û—ßπ‚ª™¬•√≈ø⁄",
+                "secondSponsor": "…œ∫£ΩÃ”˝æ÷",
+                "needSchoolRang": "1,2,8",
+                "startDate": "2019-03-15 00:00:00",
+                "endDate": "2019-05-15 00:00:00",
+                "shdesc": "∏ﬂ–£¬Ì¿≠À…",
+                "shstate": 0,
+                "startAddress": "…œ∫£∏¥µ©¥Û—ß",
+                "needSchoolPass": 2,
+                "needSceneryPass": 10,
+                "settingStart": 1,
+                "startSceneryid": 1,
+                "settingEnd": 1,
+                "endSceneryid": 1,
+                "isGroup": 0,
+                "groupNum": null,
+                "createDate": "2019-05-03 10:29:52",
+                "createbyuserid": 7,
+                "isrecommend": 1,
+                "pics": [],
+                "sceneryCount": 4,
+                "questionCount": 1,
+                "needSchoolRangName": "∏¥µ©¥Û—ß,Õ¨º√¥Û—ß,ΩªÕ®¥Û—ß",
+                "sceneryRange": [
+                    {
+                        "sceneryid": 4,
+                        "sceneryname": "≥¬‘∆π æ”º««‡∆÷∏Ô√¸¿˙ ∑ºÕƒÓπ›"
+                    },
+                    {
+                        "sceneryid": 5,
+                        "sceneryname": "…œ∫£≥¬“„π„≥°"
+                    },
+                    {
+                        "sceneryid": 6,
+                        "sceneryname": "¡˙ª™¡“ ø¡÷‘∞"
+                    },
+                    {
+                        "sceneryid": 7,
+                        "sceneryname": "…œ∫£µ‘«Ô∞◊π æ”"
+                    }
+                ]
+            },
+            {
+                "activityID": 3,
+                "activityName": "∏ﬂ–£¬Ì¿≠À…b",
+                "sponsor": "…œ∫£∏¥µ©¥Û—ß",
+                "meetingPlace": "…œ∫£∏¥µ©¥Û—ßπ‚ª™¬•√≈ø⁄",
+                "secondSponsor": "…œ∫£ΩÃ”˝æ÷",
+                "needSchoolRang": "1,2,8",
+                "startDate": "2019-03-15 00:00:00",
+                "endDate": "2019-05-15 00:00:00",
+                "shdesc": "∏ﬂ–£¬Ì¿≠À…",
+                "shstate": 0,
+                "startAddress": "…œ∫£∏¥µ©¥Û—ß",
+                "needSchoolPass": 2,
+                "needSceneryPass": 10,
+                "settingStart": 1,
+                "startSceneryid": 1,
+                "settingEnd": 1,
+                "endSceneryid": 1,
+                "isGroup": 0,
+                "groupNum": null,
+                "createDate": "2019-05-03 10:26:10",
+                "createbyuserid": 7,
+                "isrecommend": 1,
+                "pics": [],
+                "sceneryCount": 4,
+                "questionCount": 1,
+                "needSchoolRangName": "∏¥µ©¥Û—ß,Õ¨º√¥Û—ß,ΩªÕ®¥Û—ß",
+                "sceneryRange": [
+                    {
+                        "sceneryid": 4,
+                        "sceneryname": "≥¬‘∆π æ”º««‡∆÷∏Ô√¸¿˙ ∑ºÕƒÓπ›"
+                    },
+                    {
+                        "sceneryid": 0,
+                        "sceneryname": ""
+                    },
+                    {
+                        "sceneryid": 5,
+                        "sceneryname": "…œ∫£≥¬“„π„≥°"
+                    },
+                    {
+                        "sceneryid": 0,
+                        "sceneryname": ""
+                    }
+                ]
+            },
+            {
+                "activityID": 2,
+                "activityName": "∏ﬂ–£¬Ì¿≠À…",
+                "sponsor": "…œ∫£∏¥µ©¥Û—ß",
+                "meetingPlace": "…œ∫£∏¥µ©¥Û—ßπ‚ª™¬•√≈ø⁄",
+                "secondSponsor": "…œ∫£ΩÃ”˝æ÷",
+                "needSchoolRang": "1,2,8",
+                "startDate": "2019-03-15 00:00:00",
+                "endDate": "2019-05-15 00:00:00",
+                "shdesc": "∏ﬂ–£¬Ì¿≠À…",
+                "shstate": 0,
+                "startAddress": "…œ∫£∏¥µ©¥Û—ß",
+                "needSchoolPass": 2,
+                "needSceneryPass": 10,
+                "settingStart": 1,
+                "startSceneryid": 1,
+                "settingEnd": 1,
+                "endSceneryid": 1,
+                "isGroup": 0,
+                "groupNum": null,
+                "createDate": "2019-05-03 10:24:03",
+                "createbyuserid": 7,
+                "isrecommend": 1,
+                "pics": [],
+                "sceneryCount": 0,
+                "questionCount": 1,
+                "needSchoolRangName": "∏¥µ©¥Û—ß,Õ¨º√¥Û—ß,ΩªÕ®¥Û—ß",
+                "sceneryRange": []
+            },
+            {
+                "activityID": 1,
+                "activityName": "∏ﬂ–£“ª»’”Œ",
+                "sponsor": "…œ∫£¥Û—ß",
+                "meetingPlace": "…œ∫£¥Û—ß’˝√≈ø⁄",
+                "secondSponsor": "…œ∫£ΩÃ”˝æ÷",
+                "needSchoolRang": "1,2,8",
+                "startDate": "2019-03-15 00:00:00",
+                "endDate": "2019-04-15 00:00:00",
+                "shdesc": "∏ﬂ–£“ª»’”Œ,∏– ‹∏ﬂµ»—ß∏Æ∑’Œß",
+                "shstate": 0,
+                "startAddress": "…œ∫£¥Û—ß√≈ø⁄",
+                "needSchoolPass": 2,
+                "needSceneryPass": 10,
+                "settingStart": 1,
+                "startSceneryid": 1,
+                "settingEnd": 1,
+                "endSceneryid": 1,
+                "isGroup": 1,
+                "groupNum": 10,
+                "createDate": "2019-03-25 21:01:54",
+                "createbyuserid": 7,
+                "isrecommend": 1,
+                "pics": [],
+                "sceneryCount": 2,
+                "questionCount": 1,
+                "needSchoolRangName": "∏¥µ©¥Û—ß,Õ¨º√¥Û—ß,ΩªÕ®¥Û—ß",
+                "sceneryRange": [
+                    {
+                        "sceneryid": 1,
+                        "sceneryname": "»˝∫√Œ›"
+                    },
+                    {
+                        "sceneryid": 2,
+                        "sceneryname": "÷–π≤“ª¥Ûª·÷∑ºÕƒÓπ›"
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+63°¢–ﬁ∏ƒÕº∆¨source, post
+http://127.0.0.1:8360/admin/source/edit
+{
+	"sourceid":"63",
+	"sourcetype":0,
+	"sourceaddress":"aaa.jpg",
+	"targetid":47,
+	"picdesc":"aaaaaa"
+}
+
+Return
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": "–ﬁ∏ƒ≥…π¶"
 }
