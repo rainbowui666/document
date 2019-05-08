@@ -1899,3 +1899,6 @@ Return
     "errmsg": "",
     "data": "修改成功"
 }
+
+64、图9，扫码加入团队,get
+http://127.0.0.1:8360/api/group/showQr?url=http://127.0.0.1:8360/api/group/joinGroup?groupid=1&studentid=1&activityid=1
