@@ -994,8 +994,9 @@ Return
     "errmsg": "",
     "data": [
         {
-            "attentionActivityTimes": 1,
-            "attentionSceneryTimes": 1
+            "attentionActivityTimes": 4,
+            "attentionSceneryTimes": 1,
+            "attentionDiscuss": 3
         }
     ]
 }
@@ -1015,7 +1016,10 @@ Return
             {
                 "studentid": 1,
                 "sceneryid": 1,
-                "shstate": 1,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 1
+                },
                 "createdate": "2019-04-02 07:34:02",
                 "schoolid": 1,
                 "longitude": null,
@@ -1026,7 +1030,10 @@ Return
             {
                 "studentid": 1,
                 "sceneryid": 2,
-                "shstate": 1,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 0
+                },
                 "createdate": "2019-04-14 21:50:35",
                 "schoolid": 2,
                 "longitude": null,
@@ -1037,7 +1044,10 @@ Return
             {
                 "studentid": 1,
                 "sceneryid": 4,
-                "shstate": 1,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 0
+                },
                 "createdate": "2019-04-14 21:50:44",
                 "schoolid": 2,
                 "longitude": null,
@@ -1048,7 +1058,10 @@ Return
             {
                 "studentid": 1,
                 "sceneryid": 5,
-                "shstate": 1,
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 0
+                },
                 "createdate": "2019-04-14 21:50:55",
                 "schoolid": 8,
                 "longitude": null,
@@ -1079,10 +1092,10 @@ return
                 "createdate": null,
                 "activityName": "高校一日游",
                 "sponsor": "上海大学",
-                "startDate": "2019-03-15 00:00:00",
-                "endDate": "2019-04-15 00:00:00",
-                "pics": [],
-                "hasjoin": "已完成"
+                "startDate": "2019-04-10 00:00:00",
+                "endDate": "2019-05-15 00:00:00",
+                "mystatus": "进行中",
+                "pics": []
             }
         ]
     }
@@ -1902,3 +1915,52 @@ Return
 
 64、图9，扫码加入团队,get
 http://127.0.0.1:8360/api/group/showQr?url=http://127.0.0.1:8360/api/group/joinGroup?groupid=1&studentid=1&activityid=1
+
+65、我的留言，get
+http://127.0.0.1:8360/api/myself/getMyDiscuss?studentid=1&pageindex=1&pagesize=5
+Return
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "count": 3,
+        "totalPages": 1,
+        "pageSize": 5,
+        "currentPage": 1,
+        "data": [
+            {
+                "discussID": 5,
+                "distype": 1,
+                "targetid": 1,
+                "studentid": 1,
+                "content": "这个景点很美，就是乱扔垃圾的人太多.",
+                "shstate": 1,
+                "createdate": "2019-03-27 21:14:11",
+                "isrecommend": 0,
+                "clicknum": 0
+            },
+            {
+                "discussID": 4,
+                "distype": 0,
+                "targetid": 1,
+                "studentid": 1,
+                "content": "这个景点很美，就是乱扔垃圾的人太多.",
+                "shstate": 1,
+                "createdate": "2019-03-27 21:07:44",
+                "isrecommend": 0,
+                "clicknum": 0
+            },
+            {
+                "discussID": 3,
+                "distype": 3,
+                "targetid": 0,
+                "studentid": 1,
+                "content": "good.",
+                "shstate": 1,
+                "createdate": "2019-03-27 21:04:31",
+                "isrecommend": 0,
+                "clicknum": 2
+            }
+        ]
+    }
+}
