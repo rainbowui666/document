@@ -21,7 +21,17 @@ http://127.0.0.1:8360/api/admin/user/save
 "usertype":1
 }
 
+4、图片上传,post, sourcetype: 0学校；1景点；2活动，3自拍，4音频，5视频, insertid 和sourcetype对应的schoolid或activityid或sceneryid
+http://127.0.0.1:8360/admin/source/add
+参数：
+{
+"sourcetype":"0",
+"insertid": insertid,
+"sourceaddress": responseJSON.filename
+}
 
+Return
+:
 
 8、学校列表,get, areaid 对应区域表id
 http://127.0.0.1:8360/api/school/index?pageindex=1&pagesize=5&schoolname=复旦大学&areaid=1
