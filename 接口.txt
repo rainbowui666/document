@@ -350,10 +350,7 @@ http://127.0.0.1:8360/api/admin/activity/delete2?id=1
 23¡¢µÇÂ¼,post
 http://127.0.0.1:8360/api/auth/login
 ²ÎÊý:{
-            "tel":"18601011111",
-            "schoolid":1,
-            "studentname":"kbx",
-            "stuno":0
+            "code":"18601011111"
         }
 
 ·µ»Ø£º
