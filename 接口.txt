@@ -1628,7 +1628,7 @@ http://127.0.0.1:8360/api/discuss/homeDiscuss?pageindex=1&pagesize=1
 }
 
 58、留言点赞,get
-http://127.0.0.1:8360/api/discuss/likediscuss?discussid=3
+http://127.0.0.1:8360/api/discuss/likediscuss?discussid=4&studentid=5
 
 59、图2，活动列表轮播图,get
 http://127.0.0.1:8360/api/activity/getSwipeAct
