@@ -1971,3 +1971,21 @@ Return
         ]
     }
 }
+
+66、是否留言点过赞，get
+http://127.0.0.1:8360/api/discuss/hasLikeDiscuss?discussid=3&studentid=1
+Return
+{
+     "errno": 0,
+    "errmsg": "",
+    "data": 1. // 0是没有点过赞
+}
+
+67、判断活动是否签到、去过，推荐，分享,get, shstate 0想去；1签到；2去过；3推荐；4分享
+http://127.0.0.1:8360/api/student_activity/studnetHasStatus?studentid=1&activityid=1&shstate=1
+Return
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": 1
+}
