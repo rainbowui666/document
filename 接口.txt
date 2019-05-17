@@ -1568,7 +1568,7 @@ http://127.0.0.1:8360/api/index/home
 }
 
 57、首页精选评论,get
-http://127.0.0.1:8360/api/discuss/homeDiscuss?pageindex=1&pagesize=1
+http://hsyj.100eduonline.com/api/api/discuss/homeDiscuss?pageindex=1&pagesize=10&studentid=12
 {
     "errno": 0,
     "errmsg": "",
