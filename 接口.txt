@@ -247,7 +247,7 @@ http://127.0.0.1:8360/api/admin/student/addEdit?id=1, POST
 			"studentname":"kbx",
             "wxchat": "kbx",
             "tel":"18601011111",
-            "stuNo":"20181109",
+            "stuno":"20181109",
             "idcard":"420222222222",
             "birthday":"2018-09-20",
             "schoolid":1,
