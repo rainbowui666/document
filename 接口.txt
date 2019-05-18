@@ -366,7 +366,7 @@ http://127.0.0.1:8360/api/discuss/add?distype=3&studentid=1&targetid=0
 }
 
 25、留言列表，get，distype(可选),留言类型0,景点; 1,活动,2 学校,3首页,distype为0时对应sceneryid,1时对应activityID, 2学校schoolid必须要传其中一个
-http://127.0.0.1:8360/api/discuss/list?pageindex=1&pagesize=10
+http://127.0.0.1:8360/api/discuss/list?pageindex=1&pagesize=10&studentid=1
 可传参数：shstate=1&distype=1&sceneryid=1&activityid&schoolid=1
 返回：
 {
