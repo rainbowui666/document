@@ -47,6 +47,7 @@ http://127.0.0.1:8360/api/school/index?pageindex=1&pagesize=5&schoolname=∏¥µ©¥Û—
             {
                 schoolID": 1,
                 "schoolName": "∏¥µ©¥Û—ß",
+"shortName": "∏¥µ©¥Û—ß",
                 "province": "sh",
                 "city": "sh",
                 "address": "’˛Õ®¬∑255∫≈",
@@ -85,6 +86,7 @@ http://127.0.0.1:8360/api/school/detail?schoolid=1
     "data": {
         "schoolID": 1,
         "schoolName": "∏¥µ©¥Û—ß",
+"shortName": "∏¥µ©¥Û—ß",
         "province": "sh",
         "city": "sh",
         "address": "’˛Õ®¬∑255∫≈",
@@ -202,6 +204,7 @@ http://127.0.0.1:8360/api/scenery/detail?id=1 (delete)
 http://127.0.0.1:8360/api/admin/school/addEdit
 {
 					"schoolname":"…œ∫£¥Û—ß",
+"shortname":"…œ∫£¥Û—ß",
                     "province": "…œ∫£",
                     "city": "…œ∫£",
                     "address": "–Ïº“ª„",
@@ -381,31 +384,40 @@ http://127.0.0.1:8360/api/discuss/list?pageindex=1&pagesize=10&studentid=1
             {
                 "discussID": 5,
                 "studentName": "kbx",
+                "photo": "https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erXlFZHjjhKY6BWu48SR3gV6sO1gCsibx23W44FHgj1oXV2hgdgiaUibbz7q3AmTHjDQzwEiayoSasUJQ/132",
                 "distype": 1,
                 "targetid": 1,
                 "studentid": 1,
                 "content": "’‚∏ˆæ∞µ„∫‹√¿£¨æÕ «¬“»”¿¨ª¯µƒ»ÀÃ´∂‡.",
                 "shstate": 1,
+                "isrecommend": 1,
+                "createdate": "2019-03-27 21:14:11",
                 "targetaddress": "∏ﬂ–£“ª»’”Œ"
             },
             {
                 "discussID": 4,
                 "studentName": "kbx",
-                "distype": 0,
+                "photo": "https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erXlFZHjjhKY6BWu48SR3gV6sO1gCsibx23W44FHgj1oXV2hgdgiaUibbz7q3AmTHjDQzwEiayoSasUJQ/132",
+                "distype": 1,
                 "targetid": 1,
                 "studentid": 1,
                 "content": "’‚∏ˆæ∞µ„∫‹√¿£¨æÕ «¬“»”¿¨ª¯µƒ»ÀÃ´∂‡.",
                 "shstate": 1,
-                "targetaddress": "»˝∫√Œ›"
+                "isrecommend": 1,
+                "createdate": "2019-03-27 21:07:44",
+                "targetaddress": "∏ﬂ–£“ª»’”Œ"
             },
             {
                 "discussID": 3,
                 "studentName": "kbx",
+                "photo": "https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erXlFZHjjhKY6BWu48SR3gV6sO1gCsibx23W44FHgj1oXV2hgdgiaUibbz7q3AmTHjDQzwEiayoSasUJQ/132",
                 "distype": 3,
                 "targetid": 0,
                 "studentid": 1,
                 "content": "good.",
                 "shstate": 1,
+                "isrecommend": 1,
+                "createdate": "2019-03-27 21:04:31",
                 "targetaddress": "APP ◊“≥"
             }
         ]
@@ -1259,6 +1271,7 @@ http://127.0.0.1:8360/api/school/getSchoolList?pageindex=1&pagesize=5&schoolname
                 "city": "sh",
                 "address": "’˛Õ®¬∑255∫≈",
                 "schooldesc": "∏¥µ©¥Û—ß",
+"shortName": "∏¥µ©¥Û—ß",
                 "shstate": {
                     "wantto": 0,
                     "disnum": 0
@@ -1519,17 +1532,59 @@ Return
 }
 
 56°¢ ◊“≥æ∞µ„Õ∆ºˆ∫ÕªÓ∂ØÕ∆ºˆ£∫get
-http://127.0.0.1:8360/api/index/home
+http://127.0.0.1:8360/api/index/home?studentid=1
 {
     "errno": 0,
     "errmsg": "",
     "data": {
         "activitydata": [
             {
-                "activityID": 1,
-                "activityName": "test1",
+                "activityID": 4,
+                "activityName": "∏ﬂ–£¬Ì¿≠À…c",
+                "startDate": "2019-05-15 00:00:00",
+                "endDate": "2019-05-25 00:00:00",
+                "isGroup": 0,
+                "pics": [
+                    {
+                        "sourceID": 6,
+                        "sourceType": 2,
+                        "sourceAddress": "image/jtjpg",
+                        "createDate": "2019-03-23 11:30:52",
+                        "targetid": 4,
+                        "shstate": 0,
+                        "picdesc": null
+                    }
+                ],
+                "joinnum": 0,
+                "hasjoin": "Ω¯––÷–"
+            },
+            {
+                "activityID": 3,
+                "activityName": "∏ﬂ–£¬Ì¿≠À…b",
+                "startDate": "2019-03-15 00:00:00",
+                "endDate": "2019-05-15 00:00:00",
+                "isGroup": 0,
                 "pics": [],
-                "joinnum": 1
+                "joinnum": 0
+            },
+            {
+                "activityID": 2,
+                "activityName": "∏ﬂ–£¬Ì¿≠À…",
+                "startDate": "2019-03-15 00:00:00",
+                "endDate": "2019-05-15 00:00:00",
+                "isGroup": 0,
+                "pics": [],
+                "joinnum": 0
+            },
+            {
+                "activityID": 1,
+                "activityName": "∏ﬂ–£“ª»’”Œ",
+                "startDate": "2019-04-10 00:00:00",
+                "endDate": "2019-05-15 00:00:00",
+                "isGroup": 1,
+                "pics": [],
+                "joinnum": 1,
+                "hasjoin": "“—ÕÍ≥…"
             }
         ],
         "scenerydata": [
@@ -1673,6 +1728,7 @@ http://127.0.0.1:8360/api/school/getChildSchool?schoolid=47
         {
             "schoolID": 172,
             "schoolName": "…œ∫£¥Û—ßaaa",
+"shortName": "…œ∫£¥Û—ßaaa",
             "province": "…œ∫£",
             "city": "…œ∫£",
             "address": "–Ïº“ª„",
@@ -1706,6 +1762,7 @@ Return
             {
                 "schoolID": 1,
                 "schoolName": "∏¥µ©¥Û—ß",
+"shortName": "∏¥µ©¥Û—ß",
                 "province": "sh",
                 "city": "sh",
                 "address": "’˛Õ®¬∑255∫≈",
