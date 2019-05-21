@@ -2046,3 +2046,52 @@ Return
     "errmsg": "",
     "data": 1
 }
+
+68、图17中间,我签到的景点,get
+http://127.0.0.1:8360/api/myself/getMyScenery?studentid=1
+Return
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": [
+        {
+            "studentid": 1,
+            "sceneryid": 2,
+            "shstate": {
+                "wantto": 0,
+                "disnum": 0
+            },
+            "createdate": "2019-04-14 21:50:35",
+            "sceneryTitle": "中共一大会址纪念馆",
+            "shdesc": "中共一大会址纪念馆",
+            "sctype": 0,
+            "pics": []
+        },
+        {
+            "studentid": 1,
+            "sceneryid": 4,
+            "shstate": {
+                "wantto": 0,
+                "disnum": 0
+            },
+            "createdate": "2019-04-14 21:50:44",
+            "sceneryTitle": "陈云故居记青浦革命历史纪念馆",
+            "shdesc": "陈云故居记青浦革命历史纪念馆",
+            "sctype": 0,
+            "pics": []
+        },
+        {
+            "studentid": 1,
+            "sceneryid": 5,
+            "shstate": {
+                "wantto": 0,
+                "disnum": 0
+            },
+            "createdate": "2019-04-14 21:50:55",
+            "sceneryTitle": "上海陈毅广场",
+            "shdesc": "上海陈毅广场",
+            "sctype": 0,
+            "pics": []
+        }
+    ]
+}
