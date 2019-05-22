@@ -11,7 +11,7 @@
  Target Server Version : 80013
  File Encoding         : utf-8
 
- Date: 04/05/2019 16:06:11 PM
+ Date: 05/22/2019 20:24:36 PM
 */
 
 SET NAMES utf8;
@@ -42,8 +42,10 @@ CREATE TABLE `culture_activity` (
   `isGroup` tinyint(4) DEFAULT NULL,
   `groupNum` int(11) DEFAULT NULL,
   `createDate` datetime DEFAULT CURRENT_TIMESTAMP,
+  `createbyuserid` int(11) DEFAULT NULL,
+  `isrecommend` tinyint(4) DEFAULT '0',
   PRIMARY KEY (`activityID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `culture_activity_scenery`
@@ -79,6 +81,28 @@ CREATE TABLE `culture_answer_question` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+--  Table structure for `culture_area`
+-- ----------------------------
+DROP TABLE IF EXISTS `culture_area`;
+CREATE TABLE `culture_area` (
+  `areaid` int(11) NOT NULL AUTO_INCREMENT,
+  `areaname` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`areaid`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+--  Table structure for `culture_attention_activity`
+-- ----------------------------
+DROP TABLE IF EXISTS `culture_attention_activity`;
+CREATE TABLE `culture_attention_activity` (
+  `studentid` int(11) DEFAULT NULL,
+  `sceneryid` int(11) DEFAULT NULL,
+  `activityid` int(11) DEFAULT NULL,
+  `shstate` tinyint(4) DEFAULT NULL,
+  `createdate` datetime DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
 --  Table structure for `culture_discuss`
 -- ----------------------------
 DROP TABLE IF EXISTS `culture_discuss`;
@@ -90,6 +114,8 @@ CREATE TABLE `culture_discuss` (
   `content` varchar(256) DEFAULT NULL,
   `shstate` tinyint(4) DEFAULT '0' COMMENT '0待审核，1审核通过，2删除,3受理，4拒绝',
   `createdate` datetime DEFAULT CURRENT_TIMESTAMP,
+  `isrecommend` tinyint(4) DEFAULT '0',
+  `clicknum` int(11) DEFAULT '0',
   PRIMARY KEY (`discussID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
@@ -107,6 +133,35 @@ CREATE TABLE `culture_group` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
+--  Table structure for `culture_like_discuss`
+-- ----------------------------
+DROP TABLE IF EXISTS `culture_like_discuss`;
+CREATE TABLE `culture_like_discuss` (
+  `studentid` int(11) DEFAULT NULL,
+  `discussid` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+--  Table structure for `culture_pagecache`
+-- ----------------------------
+DROP TABLE IF EXISTS `culture_pagecache`;
+CREATE TABLE `culture_pagecache` (
+  `cacheid` int(11) NOT NULL AUTO_INCREMENT,
+  `cachename` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`cacheid`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+--  Table structure for `culture_pagecache_copy`
+-- ----------------------------
+DROP TABLE IF EXISTS `culture_pagecache_copy`;
+CREATE TABLE `culture_pagecache_copy` (
+  `cacheid` int(11) NOT NULL AUTO_INCREMENT,
+  `cachename` varchar(64) DEFAULT NULL,
+  PRIMARY KEY (`cacheid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
 --  Table structure for `culture_permission`
 -- ----------------------------
 DROP TABLE IF EXISTS `culture_permission`;
@@ -114,7 +169,16 @@ CREATE TABLE `culture_permission` (
   `permissionID` int(11) NOT NULL AUTO_INCREMENT,
   `permissionName` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`permissionID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+--  Table structure for `culture_permission_school`
+-- ----------------------------
+DROP TABLE IF EXISTS `culture_permission_school`;
+CREATE TABLE `culture_permission_school` (
+  `schoolid` int(11) DEFAULT NULL,
+  `permissionid` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `culture_question`
@@ -171,8 +235,9 @@ CREATE TABLE `culture_scenery` (
   `sceneryTitle` varchar(256) DEFAULT NULL,
   `soundurl` varchar(256) DEFAULT NULL,
   `videourl` varchar(256) DEFAULT NULL,
+  `isrecommend` tinyint(4) DEFAULT '0',
   PRIMARY KEY (`sceneryID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `culture_school`
@@ -191,8 +256,12 @@ CREATE TABLE `culture_school` (
   `soundurl` varchar(256) DEFAULT NULL,
   `videourl` varchar(256) DEFAULT NULL,
   `parentid` int(11) DEFAULT '0',
+  `areaid` int(11) DEFAULT NULL,
+  `createbyuserid` int(11) DEFAULT NULL,
+  `ispublic` tinyint(4) DEFAULT '1',
+  `shortName` varchar(64) DEFAULT '',
   PRIMARY KEY (`schoolID`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=238 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `culture_source`
@@ -207,7 +276,7 @@ CREATE TABLE `culture_source` (
   `shstate` tinyint(4) DEFAULT '0',
   `picdesc` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`sourceID`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `culture_student`
@@ -229,7 +298,7 @@ CREATE TABLE `culture_student` (
   `wxopenid` varchar(30) DEFAULT NULL,
   `nickname` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`studentID`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `culture_student_activity`
@@ -276,15 +345,18 @@ CREATE TABLE `culture_student_school` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
---  Table structure for `culture_User`
+--  Table structure for `culture_user`
 -- ----------------------------
-DROP TABLE IF EXISTS `culture_User`;
-CREATE TABLE `culture_User` (
+DROP TABLE IF EXISTS `culture_user`;
+CREATE TABLE `culture_user` (
   `sysUserID` int(11) NOT NULL AUTO_INCREMENT,
   `userName` varchar(128) DEFAULT NULL,
   `pwd` varchar(20) DEFAULT NULL,
+  `usertype` tinyint(4) DEFAULT '0',
+  `schoolid` int(11) DEFAULT NULL,
+  `shstate` tinyint(4) DEFAULT '0',
   PRIMARY KEY (`sysUserID`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `culture_user_role`
