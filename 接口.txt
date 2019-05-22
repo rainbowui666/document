@@ -1591,32 +1591,26 @@ http://127.0.0.1:8360/api/index/home?studentid=1
             {
                 "sceneryID": 9,
                 "sceneryTitle": "宋庆龄故居",
+                "schoolid": 1,
                 "pics": [],
-                "joinnum": 0
+                "joinnum": 0,
+                "schoolName": "复旦大学"
             },
             {
                 "sceneryID": 8,
                 "sceneryTitle": "上海毛泽东故居",
+                "schoolid": 2,
                 "pics": [],
-                "joinnum": 0
+                "joinnum": 0,
+                "schoolName": "同济大学"
             },
             {
-                "sceneryID": 7,
-                "sceneryTitle": "上海翟秋白故居",
+                "sceneryID": 3,
+                "sceneryTitle": "中共二大会址纪念馆",
+                "schoolid": 1,
                 "pics": [],
-                "joinnum": 0
-            },
-            {
-                "sceneryID": 6,
-                "sceneryTitle": "龙华烈士林园",
-                "pics": [],
-                "joinnum": 0
-            },
-            {
-                "sceneryID": 5,
-                "sceneryTitle": "上海陈毅广场",
-                "pics": [],
-                "joinnum": 1
+                "joinnum": 0,
+                "schoolName": "复旦大学"
             }
         ]
     }
