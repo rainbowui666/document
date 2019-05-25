@@ -499,7 +499,7 @@ http://127.0.0.1:8360/api/search/searchList?pageindex=1&pagesize=5&keyword=大学
 }
 
 27、景点详情,get
-http://127.0.0.1:8360/api/scenery/getscenerydetail?id=1
+http://127.0.0.1:8360/api/scenery/getscenerydetail?id=1&studentid=1
 返回：
 {
     "errno": 0,
