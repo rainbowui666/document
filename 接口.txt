@@ -906,23 +906,43 @@ Return:
 }
 
 34、拍照后答题,get
-http://127.0.0.1:8360/api/question/getQuestionbyActid?id=1
+http://127.0.0.1:8360/api/question/getQuestionbyActid?activityid=1&sceneryid=1
 Return :
 {
     "errno": 0,
     "errmsg": "",
-    "data": {
-        "activityid": 1,
-        "sceneryid": 1,
-        "questionid": 3,
-        "questionTitle": "三好屋建设于那年？",
-        "questionType": 0,
-        "answerA": "1956年",
-        "answerB": "1965年",
-        "answerC": "1912年",
-        "answerD": "1987年",
-        "rightAnswer": "A"
-    }
+    "data": [
+        {
+            "activityid": 1,
+            "questionID": 2,
+            "sceneryid": 1,
+            "questionTitle": "三好屋建设于那年？",
+            "questionType": 0,
+            "score": 0,
+            "shstate": 0,
+            "createDate": "2019-03-26 21:58:09",
+            "answerA": "1956年",
+            "answerB": "1965年",
+            "answerC": "1912年",
+            "answerD": "1987年",
+            "rightAnswer": "A"
+        },
+        {
+            "activityid": 1,
+            "questionID": 3,
+            "sceneryid": 1,
+            "questionTitle": "三好屋建设于那年？",
+            "questionType": 0,
+            "score": 0,
+            "shstate": 0,
+            "createDate": "2019-03-26 21:59:34",
+            "answerA": "1956年",
+            "answerB": "1965年",
+            "answerC": "1912年",
+            "answerD": "1987年",
+            "rightAnswer": "A"
+        }
+    ]
 }
 
 35、图7,创建团队,post
@@ -1617,14 +1637,14 @@ http://127.0.0.1:8360/api/index/home?studentid=1
 }
 
 57、首页精选评论,get
-http://hsyj.100eduonline.com/api/api/discuss/homeDiscuss?pageindex=1&pagesize=10&studentid=12
+http://127.0.0.1:8360/api/discuss/homeDiscuss?pageindex=1&pagesize=10&studentid=12
 {
     "errno": 0,
     "errmsg": "",
     "data": {
         "count": 3,
         "totalPages": 1,
-        "pageSize": 5,
+        "pageSize": 10,
         "currentPage": 1,
         "data": [
             {
@@ -1635,25 +1655,31 @@ http://hsyj.100eduonline.com/api/api/discuss/homeDiscuss?pageindex=1&pagesize=10
                 "content": "这个景点很美，就是乱扔垃圾的人太多.",
                 "shstate": 1,
                 "createdate": "2019-03-27 21:14:11",
-                "isrecommend": 0,
+                "isrecommend": 1,
+                "clicknum": 0,
                 "pics": [],
+                "isgroup": 1,
+                "likednum": 0,
                 "poto": {
-                    "photo": "http://wxchat.qq.com/src/333.jpg",
+                    "photo": "https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erXlFZHjjhKY6BWu48SR3gV6sO1gCsibx23W44FHgj1oXV2hgdgiaUibbz7q3AmTHjDQzwEiayoSasUJQ/132",
                     "studentName": "kbx"
                 }
             },
             {
                 "discussID": 4,
-                "distype": 0,
+                "distype": 1,
                 "targetid": 1,
                 "studentid": 1,
                 "content": "这个景点很美，就是乱扔垃圾的人太多.",
                 "shstate": 1,
                 "createdate": "2019-03-27 21:07:44",
-                "isrecommend": 0,
+                "isrecommend": 1,
+                "clicknum": 2,
                 "pics": [],
+                "isgroup": 1,
+                "likednum": 0,
                 "poto": {
-                    "photo": "http://wxchat.qq.com/src/333.jpg",
+                    "photo": "https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erXlFZHjjhKY6BWu48SR3gV6sO1gCsibx23W44FHgj1oXV2hgdgiaUibbz7q3AmTHjDQzwEiayoSasUJQ/132",
                     "studentName": "kbx"
                 }
             },
@@ -1665,10 +1691,12 @@ http://hsyj.100eduonline.com/api/api/discuss/homeDiscuss?pageindex=1&pagesize=10
                 "content": "good.",
                 "shstate": 1,
                 "createdate": "2019-03-27 21:04:31",
-                "isrecommend": 0,
+                "isrecommend": 1,
+                "clicknum": 2,
                 "pics": [],
+                "likednum": 0,
                 "poto": {
-                    "photo": "http://wxchat.qq.com/src/333.jpg",
+                    "photo": "https://wx.qlogo.cn/mmopen/vi_32/DYAIOgq83erXlFZHjjhKY6BWu48SR3gV6sO1gCsibx23W44FHgj1oXV2hgdgiaUibbz7q3AmTHjDQzwEiayoSasUJQ/132",
                     "studentName": "kbx"
                 }
             }
