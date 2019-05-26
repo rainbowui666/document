@@ -2117,3 +2117,11 @@ Return
         }
     ]
 }
+
+69、自拍上传, post
+http://127.0.0.1:8360/api/upload/wxUpload
+参数：
+{
+"sourcetype":"0",
+"insertid": insertid
+}
