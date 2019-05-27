@@ -11,7 +11,7 @@
  Target Server Version : 80013
  File Encoding         : utf-8
 
- Date: 05/22/2019 20:24:36 PM
+ Date: 05/27/2019 20:41:48 PM
 */
 
 SET NAMES utf8;
@@ -198,7 +198,7 @@ CREATE TABLE `culture_question` (
   `answerD` varchar(256) DEFAULT NULL,
   `rightAnswer` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`questionID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `culture_role`
@@ -275,6 +275,7 @@ CREATE TABLE `culture_source` (
   `targetid` int(11) DEFAULT NULL COMMENT '资源id, 0对应学校表schoolid;1对象景点表scenneryid,2对应活动表actionid',
   `shstate` tinyint(4) DEFAULT '0',
   `picdesc` varchar(256) DEFAULT NULL,
+  `userid` int(11) DEFAULT NULL,
   PRIMARY KEY (`sourceID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8;
 
@@ -285,7 +286,7 @@ DROP TABLE IF EXISTS `culture_student`;
 CREATE TABLE `culture_student` (
   `studentID` int(11) NOT NULL AUTO_INCREMENT,
   `studentName` varchar(64) DEFAULT NULL,
-  `sex` tinyint(4) DEFAULT NULL COMMENT '0男，1女',
+  `sex` tinyint(4) DEFAULT '0' COMMENT '0男，1女',
   `wxchat` varchar(256) DEFAULT NULL,
   `tel` varchar(36) DEFAULT NULL,
   `stuNo` int(20) DEFAULT NULL,

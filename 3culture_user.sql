@@ -1,0 +1,1 @@
+insert into culture_user (userName,pwd,userType,schoolid,shstate) value ('admin','123456',1,0,0);
