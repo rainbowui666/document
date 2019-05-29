@@ -348,7 +348,7 @@ http://127.0.0.1:8360/api/activity/list2?pageindex=1&pagesize=5&activityid=1
 http://127.0.0.1:8360/api/admin/activity/delete?id=1
 
 22、删除活动问题,get
-http://127.0.0.1:8360/api/admin/activity/delete2?id=1
+http://127.0.0.1:8360/api/admin/activity/delete2?id=1&activityid=1&sceneryid=1
 
 23、登录,post
 http://127.0.0.1:8360/api/auth/login
