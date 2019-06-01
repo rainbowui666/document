@@ -2125,3 +2125,6 @@ http://127.0.0.1:8360/api/upload/wxUpload
 "sourcetype":"0",
 "insertid": insertid
 }
+
+70、完成活动,get,iscomplate,1，完成活动,0，默认
+http://127.0.0.1:8360/api/activity/changeComplate?activityid=1&iscomplate=1
