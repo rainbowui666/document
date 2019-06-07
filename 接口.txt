@@ -78,6 +78,51 @@ http://127.0.0.1:8360/api/school/index?pageindex=1&pagesize=5&schoolname=∏¥µ©¥Û—
     }
 }
 
+8a°¢—ß–£¡–±Ì,√ª”–parentid,get, areaid ∂‘”¶«¯”Ú±Ìid
+http://127.0.0.1:8360/api/school/indexOrgList?pageindex=1&pagesize=5&schoolname=∏¥µ©¥Û—ß&areaid=1
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "count": 1,
+        "totalPages": 1,
+        "pageSize": 5,
+        "currentPage": 1,
+        "data": [
+            {
+                schoolID": 1,
+                "schoolName": "∏¥µ©¥Û—ß",
+"shortName": "∏¥µ©¥Û—ß",
+                "province": "sh",
+                "city": "sh",
+                "address": "’˛Õ®¬∑255∫≈",
+                "schooldesc": "∏¥µ©¥Û—ß",
+                "shstate": {
+                    "wantto": 0,
+                    "disnum": 0
+                },
+                "longitude": null,
+                "latitude": null,
+                "soundurl": null,
+                "videourl": null,
+                "parentid": 0,
+                "areaid": null,
+                "pics": [ //Õº∆¨
+                    {
+                        "sourceID": 4,
+                        "sourceType": 1,
+                        "sourceAddress": "src/aaa.jpg",
+                        "createDate": "2019-03-18 22:35:50",
+                        "targetid": 1,
+                        "shstate": 0,
+                        "picdesc": null
+                    }
+                ]
+            }
+        ]
+    }
+}
+
 9°¢Õº3£¨—ß–£œÍ«È
 http://127.0.0.1:8360/api/school/detail?schoolid=1
 {
