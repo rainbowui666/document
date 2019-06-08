@@ -311,7 +311,7 @@ http://127.0.0.1:8360/api/admin/student/addEdit?id=1, POST
 http://127.0.0.1:8360/api/admin/student/delete?id=1
 
 17a、修改学生状态,get,shstate 2未验证，3验证中，4 验证通过
-http://127.0.0.1:8360/api/admin/student/updateState?studentid=1&shstate=2
+http://127.0.0.1:8360/api/admin/student/updateStatus?studentid=1&shstate=2
 
 18、添加修改活动1,post
 http://127.0.0.1:8360/api/admin/activity/addEdit1?id=1
