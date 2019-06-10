@@ -281,7 +281,8 @@ http://127.0.0.1:8360/api/admin/scenery/addEdit
 "latitude":¡±123.34.556.433¡±,
 "soundurl":¡±http://aaa.com/aa.mp3¡±,
 "videourl":¡±http://aaa.com/aa.mp4¡±,
-"isrecommend":1
+"isrecommend":1,
+"distance":100
 }
 
 addEdit?id=xxx£¬´øidÊÇ±à¼­
