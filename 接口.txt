@@ -595,7 +595,7 @@ http://127.0.0.1:8360/api/scenery/getscenerydetail?id=1&studentid=1
 
 28、景点签到,get
 // shstate,0想去；1签到；2去过；3推荐；4分享
-http://127.0.0.1:8360/api/student_scenery/addEdit?studentid=1&sceneryid=1&shstate=1
+http://127.0.0.1:8360/api/student_scenery/addEdit?studentid=1&sceneryid=1&shstate=1&activityid=1
 
 29、图4，前台活动列表,get
 http://127.0.0.1:8360/api/activity/frontList?pageindex=1&pagesize=5&studentid=1
