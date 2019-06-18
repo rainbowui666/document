@@ -2255,6 +2255,7 @@ Return
 }
 
 72、修改题目,post
+http://127.0.0.1:8360/admin/question/addEdit
 参数：
 {
             "questiontitle": "how are u",
