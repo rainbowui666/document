@@ -593,6 +593,52 @@ http://127.0.0.1:8360/api/scenery/getscenerydetail?id=1&studentid=1
     }
 }
 
+27a、活动景点详情,get
+http://127.0.0.1:8360/api/scenery/getActivitySceneryDetail?sceneryid=1&studentid=1&activity=1
+返回：
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "sceneryID": 1,
+        "schoolid": 1,
+        "address": "sh",
+        "shdesc": "1",
+        "longitude": null,
+        "latitude": null,
+        "sctype": 0,
+        "shstate": {
+            "wantto": 0,
+            "disnum": 1
+        },
+        "sceneryTitle": "三好屋",
+        "soundurl": null,
+        "videourl": null,
+        "pics": [
+            {
+                "sourceID": 4,
+                "sourceType": 1,
+                "sourceAddress": "src/aaa.jpg",
+                "createDate": "2019-03-18 22:35:50",
+                "targetid": 1,
+                "shstate": 0,
+                "picdesc": null
+            }
+        ],
+        "discussList": [
+            {
+                "discussID": 4,
+                "distype": 0,
+                "targetid": 1,
+                "studentid": 1,
+                "content": "这个景点很美，就是乱扔垃圾的人太多.",
+                "shstate": 1,
+                "createdate": "2019-03-27 21:07:44"
+            }
+        ]
+    }
+}
+
 28、景点签到,get
 // shstate,0想去；1签到；2去过；3推荐；4分享
 http://127.0.0.1:8360/api/student_scenery/addEdit?studentid=1&sceneryid=1&shstate=1&activityid=1
