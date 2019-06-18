@@ -2254,3 +2254,21 @@ Return
     }
 }
 
+72、修改题目,post
+参数：
+{
+            "questiontitle": "how are u",
+            "answera": "aaa",
+            "answerb": "bbb",
+            "answerc": "ccc",
+            "answerd": "ddd",
+            "rightanswer": "A",
+            "questionid":28
+        }
+
+return
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": "活动修改成功"
+}
