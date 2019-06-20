@@ -594,7 +594,7 @@ http://127.0.0.1:8360/api/scenery/getscenerydetail?id=1&studentid=1
 }
 
 27a、活动景点详情,get
-http://127.0.0.1:8360/api/scenery/getActivitySceneryDetail?sceneryid=1&studentid=1&activity=1
+http://127.0.0.1:8360/api/scenery/getActivitySceneryDetail?sceneryid=1&studentid=1&activityid=1
 返回：
 {
     "errno": 0,
@@ -1044,7 +1044,8 @@ Return :
 http://127.0.0.1:8360/api/group/addEdit
 Param:{
 	"id":1,
-	"groupname":"外语精英队"
+	"groupname":"外语精英队",
+"Students":1
 }
 
 
