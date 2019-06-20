@@ -2274,3 +2274,14 @@ return
     "errmsg": "",
     "data": "活动修改成功"
 }
+
+73、确认扫码认
+http://127.0.0.1:8360/api/group/readyScan?studentid=1
+return
+{
+    "errno": 0,
+    "errmsg": "",
+    "data": {
+        "scan": "1"
+    }
+}
