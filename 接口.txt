@@ -1129,9 +1129,10 @@ Return
     "errmsg": "",
     "data": [
         {
-            "attentionActivityTimes": 4,
-            "attentionSceneryTimes": 1,
-            "attentionDiscuss": 3
+            "attentionSceneryTimes": 7, // 景点签到次数
+            "attentionJoinActivityTimes": 7, // 活动景点签到次数
+            "attentionBaomingTimes": 1,      // 报名次数
+            "attentionDiscuss": 4.      // 留言次数
         }
     ]
 }
