@@ -411,7 +411,8 @@ http://127.0.0.1:8360/api/auth/login
 24、留言,post
 distype：留言类型0,景点; 1,活动,2 学校,3首页
 targetid：为0时对应sceneryid,1时对应activityID, 2学校schoolid, 3 app首页不用传
-http://127.0.0.1:8360/api/discuss/add?distype=3&studentid=1&targetid=0
+scenerytype: 0一般景点，1活动景点， 一般景点可不用传
+http://127.0.0.1:8360/api/discuss/add?distype=3&studentid=1&targetid=0&scenerytype=1
 参数：
 {
 "content":"good."
@@ -474,7 +475,7 @@ http://127.0.0.1:8360/api/discuss/list?pageindex=1&pagesize=10&studentid=1
 }
 
 25、修改，审批，受理留言
-0,默认待审核;1,审核通过，2，删除,3受理，4拒绝
+0,默认待审核;1,审核通过,3受理，4拒绝
 http://127.0.0.1:8360/api/admin/discuss/update?id=3&shstate=1&isrecommend=1
 
 26、首页-搜索学校或景点,get
